@@ -1,0 +1,16 @@
+{
+  "include": "src/**/*.ts",
+  "compilerOptions": {
+    "target": "ESNext",
+    "strict": true,
+    "downlevelIteration": true,
+    "importHelpers": true,
+    "module": "ESNext",
+    "outDir": "bin/",
+    "strict": true,
+    "baseUrl": "src",
+    "esModuleInterop": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true
+  }
+}
