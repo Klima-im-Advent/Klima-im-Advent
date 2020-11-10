@@ -1,9 +1,10 @@
 import * as express from "express";
 
 const app = express();
+app.set('view engine', 'ejs');
 
 app.get("/", (request, response) => {
-	response.send("Es scheint zu funktionieren");
+	response.render('index');
 });
 
 const port = process.env.PORT || 2412;
