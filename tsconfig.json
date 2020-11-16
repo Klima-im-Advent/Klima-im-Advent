@@ -1,11 +1,12 @@
 {
-  "include": "src/**/*.ts",
+  "include": ["src/**/*.ts"],
   "compilerOptions": {
+    "moduleResolution": "node",
+    "module": "CommonJS",
     "target": "ESNext",
     "strict": true,
     "downlevelIteration": true,
     "importHelpers": true,
-    "module": "ESNext",
     "outDir": "bin/",
     "strict": true,
     "baseUrl": "src",
