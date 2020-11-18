@@ -1,0 +1,22 @@
+name: deploy
+on:
+  push:
+    branches:
+      - main
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: deploy via ssh
+        uses: appleboy/ssh-action@main
+        with:
+          host: ${{ secrets.ADVENT_HOST }}
+          username: ${{ secrets.ADVENT_USER }}
+          key: ${{ secrets.ADVENT_KEY }}
+          script: |
+            cd /root/advent
+            git checkout main
+            git pull
+            npm i --no-progress
+            pm2 restart advent
