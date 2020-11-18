@@ -6,10 +6,99 @@
   </title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    body {
+      background: url('background.jpg');
+    }
+    nav > ul > li {
+      padding: 0 10px;
+    }
+    #elk {
+      left: -47px;
+      top: -42px;
+      width: 80px;
+    }
+    #santa {
+      left: calc(100% - 34px);
+      top: -42px;
+      width: 40px;
+    }
+  </style>
 </head>
-<body>
-  <h1>
-    Klima im Advent
-  </h1>
+<body class="h-screen flex flex-col justify-between">
+  <header class="flex justify-center pt-12 mb-3">
+    <nav class="bg-green-dark text-white px-5 text-lg relative">
+      <img src="elk.png" class="absolute" id="elk">
+      <h1 class="text-3xl font-semibold">
+        Klima im Advent
+      </h1>
+      <img src="santa.png" class="absolute" id="santa">
+    </nav>
+  </header>
+  <main class="flex">
+    <img src="1.png">
+  </main>
+  <footer class="bg-red-dark text-green-light border-t border-white">
+    <ul class="flex justify-around text-xl">
+      <li>
+        Wir
+      </li>
+      <li>
+        Folgen
+      </li>
+      <li>
+        Teilen
+      </li>
+      <li>
+        Spenden
+      </li>
+    </ul>
+    <!--
+    <ul class="flex social justify-around text-xl">
+      <li class="instagram">
+      </li>
+      <li class="twitter">
+      </li>
+      <li class="facebook">
+      </li>
+      <li class="whatsapp">
+      </li>
+      <li class="telegram">
+      </li>
+    </ul>
+    -->
+  </footer>
+<div class="snowflakes" aria-hidden="true">
+  <div class="snowflake">
+  ❅
+  </div>
+  <div class="snowflake">
+  ❅
+  </div>
+  <div class="snowflake">
+  ❆
+  </div>
+  <div class="snowflake">
+  ❄
+  </div>
+  <div class="snowflake">
+  ❅
+  </div>
+  <div class="snowflake">
+  ❆
+  </div>
+  <div class="snowflake">
+  ❄
+  </div>
+  <div class="snowflake">
+  ❅
+  </div>
+  <div class="snowflake">
+  ❆
+  </div>
+  <div class="snowflake">
+  ❄
+  </div>
+</div>
 </body>
 </html>

@@ -1,11 +1,11 @@
-import * as gulp from 'gulp';
-import * as postcss from 'gulp-postcss';
-import * as tailwindcss from 'tailwindcss';
-import * as autoprefixer from 'autoprefixer';
+import postcss from 'gulp-postcss';
+import gulp from 'gulp';
+import tailwindcss from 'tailwindcss';
+import autoprefixer from 'autoprefixer';
 
-function css(cb) {
+const css: gulp.TaskFunction = () => {
   return gulp.src('www/style.css')
-  .pipe(postcss([tailwindcss, autoprefixer]))
+  .pipe(postcss([tailwindcss('./tailwind.config.cjs'), autoprefixer]))
   .pipe(gulp.dest('static/css/'));
 }
 
