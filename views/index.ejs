@@ -10,45 +10,60 @@
     body {
       background: #c4c4c4;
     }
-    ul {
-      padding-left: calc((100% - 360px)/2);
-      padding-right: calc((100% - 360px)/2);
-    }
   </style>
 </head>
 <body class="flex h-full min-w-screen justify-beginning overflow-y-hidden overflow-x-scroll">
   <ul class="flex flex-none item-center overflow-scroll">
-    <li class="flex items-center overflow-hidden">
-      <a href="/tag/1">
-        <img src="/background_1.jpg">
+    <% for (let i = 1; i < 10; ++i) {%>
+    <li class="flex items-center overflow-hidden w-screen">
+      <a href="/tag/1" class="w-full">
+        <img src="/background_<%=i%>.jpg" class="w-full">
       </a>
     </li>
-    <li class="flex items-center overflow-hidden">
-      <a href="/tag/2">
-        <img src="/background_1.jpg">
-      </a>
-    </li>
-    <li class="flex items-center overflow-hidden">
-      <a href="/tag/2">
-        <img src="/background_1.jpg">
-      </a>
-    </li>
+    <% } %>
   </ul>
   <script>
     let body = document.getElementsByTagName('body')[0];
+
+    let lastX = 0;
+    body.addEventListener(
+      'touchstart',
+      (event) => {
+        console.log(event.touches[0].clientX);
+        lastX = event.touches[0].clientX;
+      });
+    body.addEventListener(
+      'touchmove',
+      (event) => {
+        event.preventDefault();
+        console.log("New Position:", event.touches[0].clientX);
+        let currentX = event.touches[0].clientX;
+        let distance = lastX - currentX;
+        console.log("Distance: ", distance);
+        body.scrollBy({
+          left: distance,
+          behaviour: 'smooth',
+        });
+        lastX = event.touches[0].clientX;
+      },
+      {
+        passive: false,
+      });
     body.addEventListener(
       'touchend',
       (event) => {
-        let remainder = body.scrollLeft % 360;
+        event.preventDefault();
+        console.log('end');
+        let remainder = body.scrollLeft % screen.width;
 
-        if (remainder < 360 / 2) {
+        if (remainder < screen.width / 2) {
           body.scroll({
             left: body.scrollLeft - remainder,
             behavior: 'smooth',
           });
         } else {
           body.scroll({
-            left: body.scrollLeft + 360 - remainder,
+            left: body.scrollLeft + screen.width - remainder,
             behavior: 'smooth',
           });
         }
