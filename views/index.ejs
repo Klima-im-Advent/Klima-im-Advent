@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="h-full">
+<html class="h-full overflow-auto">
 <head>
   <title>
     Klima im Advent
@@ -10,24 +10,42 @@
     body {
       background: #c4c4c4;
     }
-    main {
+    ul {
       padding-left: calc((100% - 360px)/2);
       padding-right: calc((100% - 360px)/2);
     }
   </style>
 </head>
-<body class="flex h-full min-w-screen justify-beginning overflow-y-hidden">
-  <main class="flex flex-none item-center">
-    <div class="flex items-center overflow-hidden">
+<body class="flex h-full min-w-screen justify-beginning overflow-y-hidden overflow-x-scroll">
+  <ul class="flex flex-none item-center overflow-scroll">
+    <li class="flex items-center overflow-hidden">
       <a href="/tag/1">
         <img src="/background_1.jpg">
       </a>
-    </div>
-    <div class="flex items-center overflow-hidden">
+    </li>
+    <li class="flex items-center overflow-hidden">
       <a href="/tag/2">
         <img src="/background_1.jpg">
       </a>
-    </div>
-  </main>
+    </li>
+    <li class="flex items-center overflow-hidden">
+      <a href="/tag/2">
+        <img src="/background_1.jpg">
+      </a>
+    </li>
+  </ul>
+  <script>
+    let body = document.getElementsByTagName('body')[0];
+    body.addEventListener(
+      'touchend',
+      (event) => {
+        let remainder = body.scrollLeft % 360;
+        if (remainder < 360 / 2) {
+          body.scrollLeft -= remainder;
+        } else {
+          body.scrollLeft += 360 - remainder;
+        }
+      });
+  </script>
 </body>
 </html>
