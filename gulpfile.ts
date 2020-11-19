@@ -2,6 +2,9 @@ import postcss from 'gulp-postcss';
 import gulp from 'gulp';
 import tailwindcss from 'tailwindcss';
 import autoprefixer from 'autoprefixer';
+import ts from 'gulp-typescript';
+
+const tsProject = ts.createProject("tsconfigwww.json");
 
 const css: gulp.TaskFunction = () => {
   return gulp.src('www/style.css')
@@ -9,7 +12,15 @@ const css: gulp.TaskFunction = () => {
   .pipe(gulp.dest('static/css/'));
 }
 
+const typescript: gulp.TaskFunction = () => {
+  return tsProject.src().pipe(tsProject()).js.pipe(gulp.dest("static/js"));
+}
+
 export const watch = () => {
   gulp.watch(['www/*.css', 'tailwind.config.js'], css);
+  gulp.watch(['www/*.ts', 'tsconfigwww.json'], typescript);
 };
-export default css;
+
+const all = gulp.parallel(typescript, css);
+
+export default all;
