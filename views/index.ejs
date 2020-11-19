@@ -40,10 +40,17 @@
       'touchend',
       (event) => {
         let remainder = body.scrollLeft % 360;
+
         if (remainder < 360 / 2) {
-          body.scrollLeft -= remainder;
+          body.scroll({
+            left: body.scrollLeft - remainder,
+            behavior: 'smooth',
+          });
         } else {
-          body.scrollLeft += 360 - remainder;
+          body.scroll({
+            left: body.scrollLeft + 360 - remainder,
+            behavior: 'smooth',
+          });
         }
       });
   </script>
