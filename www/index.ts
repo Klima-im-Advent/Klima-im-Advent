@@ -45,9 +45,9 @@ body.addEventListener(
 
     let breakpoint = null;
     if (lastX < startX) {
-      breakpoint = elementWidth / 4;
+      breakpoint = elementWidth / 6;
     } else {
-      breakpoint = 3 * elementWidth / 4;
+      breakpoint = 5 * elementWidth / 6;
     }
     if (remainder < breakpoint) {
       translateBy(-remainder, true);
