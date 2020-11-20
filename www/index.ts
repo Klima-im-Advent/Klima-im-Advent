@@ -33,7 +33,13 @@ body.addEventListener(
     console.log('end');
     const remainder = body.scrollLeft % screen.width;
 
-    if (remainder < screen.width / 2) {
+    let breakpoint = null;
+    if (lastX < startX) {
+      breakpoint = screen.width / 3;
+    } else {
+      breakpoint = 2 * screen.width / 3;
+    }
+    if (remainder < breakpoint) {
       body.scroll({
         left: body.scrollLeft - remainder,
         behavior: 'smooth',
