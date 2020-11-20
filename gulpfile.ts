@@ -17,11 +17,16 @@ const css: gulp.TaskFunction = () => {
 const typescript: gulp.TaskFunction = () => {
   return gulp.src('www/index.ts')
     .pipe(webpack({
+      mode: 'development',
       output: {
         filename: 'index.js',
       },
       module: {
         rules: [
+          {
+            test: /\.css$/i,
+            use: ["style-loader", "css-loader"],
+          },
           {
             test: /\.ts/,
             use: 'ts-loader',

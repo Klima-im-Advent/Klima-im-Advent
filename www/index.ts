@@ -1,6 +1,4 @@
-if (!("scrollBehavior" in document.documentElement.style)) {
-  import("scroll-behavior-polyfill");
-}
+import "scroll-behavior-polyfill";
 const body = document.getElementsByTagName('body')[0];
 
 let startX = 0;
@@ -8,7 +6,6 @@ let lastX = 0;
 body.addEventListener(
   'touchstart',
   (event) => {
-    console.log(event.touches[0].clientX);
     startX = event.touches[0].clientX;
     lastX = startX;
   });
@@ -16,10 +13,8 @@ body.addEventListener(
   'touchmove',
   (event) => {
     event.preventDefault();
-    console.log("New Position:", event.touches[0].clientX);
     const currentX = event.touches[0].clientX;
     const distance = lastX - currentX;
-    console.log("Distance: ", distance);
     body.scrollBy({
       left: distance,
     });
@@ -32,14 +27,15 @@ body.addEventListener(
   'touchend',
   (event) => {
     event.preventDefault();
-    console.log('end');
-    const remainder = body.scrollLeft % screen.width;
+
+    const elementWidth = 0.9 * screen.width;
+    const remainder = body.scrollLeft % elementWidth;
 
     let breakpoint = null;
     if (lastX < startX) {
-      breakpoint = screen.width / 3;
+      breakpoint = elementWidth / 4;
     } else {
-      breakpoint = 2 * screen.width / 3;
+      breakpoint = 3 * elementWidth / 4;
     }
     if (remainder < breakpoint) {
       body.scroll({
@@ -48,7 +44,7 @@ body.addEventListener(
       });
     } else {
       body.scroll({
-        left: body.scrollLeft + screen.width - remainder,
+        left: body.scrollLeft + elementWidth - remainder,
         behavior: 'smooth',
       });
     }
