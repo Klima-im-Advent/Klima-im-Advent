@@ -25,9 +25,21 @@
           .25turn,
           rgba(0,0,0,.5), transparent 7%,
           transparent 93%, rgba(0,0,0,.5));
+      pointer-events: none;
     }
     ul {
       transition: transform 0.3s;
+    }
+
+    @media (orientation:portrait) {
+      .mysterious-element {
+        width: 95vw;
+      }
+    }
+    @media (orientation:landscape) {
+      .mysterious-element {
+        height: 100vh;
+      }
     }
   </style>
 </head>
@@ -35,9 +47,9 @@
   <main>
     <ul class="flex flex-none item-center overflow-scroll">
       <% for (let i = 1; i < 10; ++i) {%>
-      <li class="flex items-center overflow-hidden">
-        <a href="/tag/1" class="w-full">
-          <img src="/background_<%=i%>.jpg" class="w-full">
+      <li class="flex items-center justify-center overflow-hidden">
+        <a href="/tag/1">
+          <img src="/background_<%=i%>.jpg" class="mysterious-element">
         </a>
       </li>
       <% } %>
