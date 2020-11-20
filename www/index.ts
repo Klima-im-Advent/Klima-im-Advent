@@ -1,3 +1,6 @@
+if (!("scrollBehavior" in document.documentElement.style)) {
+  import("scroll-behavior-polyfill");
+}
 const body = document.getElementsByTagName('body')[0];
 
 let startX = 0;
@@ -19,7 +22,6 @@ body.addEventListener(
     console.log("Distance: ", distance);
     body.scrollBy({
       left: distance,
-      behavior: 'smooth',
     });
     lastX = event.touches[0].clientX;
   },
