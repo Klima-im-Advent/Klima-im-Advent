@@ -38,14 +38,14 @@
     }
     @media (orientation:landscape) {
       .mysterious-element {
-        height: 100vh;
+        height: 100%;
       }
     }
   </style>
 </head>
-<body class="flex h-full min-w-screen justify-beginning overflow-y-hidden overflow-x-scroll">
-  <main>
-    <ul class="flex flex-none item-center overflow-scroll">
+<body class="flex h-screen min-w-screen justify-beginning overflow-y-hidden overflow-x-scroll">
+  <main class="h-full">
+    <ul class="flex flex-none item-center overflow-hidden h-full">
       <% for (let i = 1; i < 10; ++i) {%>
       <li class="flex items-center justify-center overflow-hidden">
         <a href="/tag/1">
