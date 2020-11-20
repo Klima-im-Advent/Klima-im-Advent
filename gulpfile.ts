@@ -4,7 +4,6 @@ import babel from 'gulp-babel';
 import tailwindcss from 'tailwindcss';
 import autoprefixer from 'autoprefixer';
 import ts from 'gulp-typescript';
-import webpack from 'webpack-stream';
 
 const tsProject = ts.createProject("tsconfigwww.json");
 
@@ -15,30 +14,17 @@ const css: gulp.TaskFunction = () => {
 }
 
 const typescript: gulp.TaskFunction = () => {
-  return gulp.src('www/index.ts')
-    .pipe(webpack({
-      mode: 'development',
-      output: {
-        filename: 'index.js',
-      },
-      module: {
-        rules: [
-          {
-            test: /\.css$/i,
-            use: ["style-loader", "css-loader"],
-          },
-          {
-            test: /\.ts/,
-            use: 'ts-loader',
-            exclude: /node_modules/,
-          }
-        ]
-      },
+  return tsProject
+    .src()
+    .pipe(tsProject())
+    .js
+    .pipe(babel({
+      presets: ['@babel/preset-env']
     }))
-    .pipe(gulp.dest("static/js/"));
+    .pipe(gulp.dest("static/js"));
 }
 
-export const watch = () => {
+export const watch: gulp.TaskFunction = () => {
   gulp.watch(['www/*.css', 'tailwind.config.js'], css);
   gulp.watch(['www/*.ts', 'tsconfigwww.json'], typescript);
 };

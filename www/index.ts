@@ -1,6 +1,18 @@
-import "scroll-behavior-polyfill";
 const body = document.getElementsByTagName('body')[0];
+const list = document.getElementsByTagName('ul')[0];
 
+
+let currentTranslate = 0;
+const translateBy = (x: number, smooth: boolean) => {
+  if (smooth) {
+    list.style.transition = "transform 0.3s";
+  } else {
+    list.style.transition = "transform 0s ease 0s";
+  }
+  currentTranslate =
+    Math.min(list.getBoundingClientRect().width - 0.9 * screen.width, currentTranslate + x);
+  list.style.transform = "translate3d(-" + currentTranslate + "px,0,0)";
+};
 let startX = 0;
 let lastX = 0;
 body.addEventListener(
@@ -15,9 +27,9 @@ body.addEventListener(
     event.preventDefault();
     const currentX = event.touches[0].clientX;
     const distance = lastX - currentX;
-    body.scrollBy({
-      left: distance,
-    });
+
+    translateBy(distance, false);
+
     lastX = event.touches[0].clientX;
   },
   {
@@ -29,7 +41,7 @@ body.addEventListener(
     event.preventDefault();
 
     const elementWidth = 0.9 * screen.width;
-    const remainder = body.scrollLeft % elementWidth;
+    const remainder = currentTranslate % elementWidth;
 
     let breakpoint = null;
     if (lastX < startX) {
@@ -38,14 +50,8 @@ body.addEventListener(
       breakpoint = 3 * elementWidth / 4;
     }
     if (remainder < breakpoint) {
-      body.scroll({
-        left: body.scrollLeft - remainder,
-        behavior: 'smooth',
-      });
+      translateBy(-remainder, true);
     } else {
-      body.scroll({
-        left: body.scrollLeft + elementWidth - remainder,
-        behavior: 'smooth',
-      });
+      translateBy(elementWidth - remainder, true);
     }
   }); 
