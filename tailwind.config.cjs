@@ -3,7 +3,10 @@ module.exports = {
     removeDeprecatedGapUtilities: true,
     purgeLayersByDefault: true,
   },
-  purge: [],
+  purge: [
+    'views/**.ejs',
+    'www/*.ts',
+  ],
   theme: {
     fontFamily: {
       sans: 'Jost',

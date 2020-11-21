@@ -4,13 +4,22 @@ import babel from 'gulp-babel';
 import tailwindcss from 'tailwindcss';
 import autoprefixer from 'autoprefixer';
 import ts from 'gulp-typescript';
+import cleanCSS from 'gulp-clean-css';
 
 const tsProject = ts.createProject("tsconfigwww.json");
 
 const css: gulp.TaskFunction = () => {
-  return gulp.src('www/style.css')
-  .pipe(postcss([tailwindcss('./tailwind.config.cjs'), autoprefixer]))
-  .pipe(gulp.dest('static/css/'));
+  const unoptimized =
+    gulp.src('www/style.css')
+      .pipe(postcss([tailwindcss('./tailwind.config.cjs'), autoprefixer]));
+
+  let pipe = null;
+  if (process.env.NODE_ENV === "production") {
+    pipe = unoptimized.pipe(cleanCSS())
+  } else {
+    pipe = unoptimized;
+  }
+  return pipe.pipe(gulp.dest('static/css/'));
 }
 
 const typescript: gulp.TaskFunction = () => {

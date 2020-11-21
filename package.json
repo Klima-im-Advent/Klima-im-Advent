@@ -8,8 +8,8 @@
     "dev": "nodemon& gulp watch",
     "lint": "eslint src/ --ext .ts && prettier --config .prettierrc 'src/**/*.ts'",
     "lint-fix": "eslint src/ --ext .ts --fix && prettier --config .prettierrc 'src/**/*.ts' --write",
-    "build": "gulp && tsc",
-    "start": "node bin/main.js"
+    "build": "NODE_ENV=production gulp && tsc",
+    "start": "NODE_ENV=production node bin/main.js"
   },
   "repository": {
     "type": "git",
@@ -57,6 +57,7 @@
     "ejs": "^3.1.5",
     "express": "^4.17.1",
     "flickity": "^2.2.1",
+    "gulp-clean-css": "^4.3.0",
     "scroll-behavior-polyfill": "^2.0.13",
     "tailwindcss": "^1.9.6"
   },
