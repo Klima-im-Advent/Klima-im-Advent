@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="h-full overflow-auto">
+<html class="h-full overflow-hidden">
 <head>
   <title>
     Klima im Advent
@@ -41,10 +41,22 @@
         height: 100%;
       }
     }
+
+    #zuckerstange {
+      transform: rotate(-90deg);
+      left: calc(40% - 20px);
+    }
+    #overview {
+      top: 100vh;
+    }
   </style>
 </head>
-<body class="flex h-screen min-w-screen justify-beginning overflow-y-hidden overflow-x-scroll">
-  <main class="h-full">
+<body
+  class=
+    "min-w-screen justify-beginning overflow-y-hidden overflow-x-scroll flex
+    h-screen"
+  >
+  <main class="h-screen">
     <ul class="flex flex-none item-center overflow-hidden h-full">
       <% for (let i = 1; i < 10; ++i) {%>
       <li class="flex items-center justify-center overflow-hidden">
@@ -57,9 +69,19 @@
     <div class="absolute left-0 top-0 h-full w-full dark-edges">
     </div>
   </main>
-  <img>
-  </img>
-  <script src="js/index.js">
-  </script>
+  <div class="h-screen flex-none flex flex-col absolute bg-white" id="overview">
+    <img src="zuckerstange.svg" class="absolute" id="zuckerstange">
+    </img>
+    <% for (let i = 0; i < 4; ++i) {%>
+      <div class="flex-grow items-center flex h-3/12 bg-white z-10">
+        <% for (let j = 1; j < 7; ++j) {%>
+        <div class="w-2/12">
+          <img src="/background_<%=i * 6 + j%>.jpg">
+        </div>
+        <% } %>
+      </div>
+    <% } %>
+  </div>
+  <script src="js/index.js"></script>
 </body>
 </html>
