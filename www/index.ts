@@ -93,7 +93,8 @@ for (const item of [overview, zuckerstange])
       const distance = touch.screenY - currentY;
       currentYTranslate += distance;
       currentY += distance;
-      overview.style.transform = "translate3d(0," + Math.min(currentYTranslate) + "px,0)";
+      overview.style.transform =
+        "translate3d(0," + Math.max(currentYTranslate, -(screen.height + 10)) + "px,0)";
     }
   });
   item.addEventListener('touchend', (event) => {
