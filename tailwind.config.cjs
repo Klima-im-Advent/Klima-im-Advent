@@ -23,7 +23,13 @@ module.exports = {
         "dark": "#70041F"
       }
     },
-    extend: {},
+    extend: {
+      maxWidth: {
+        '1/3': '33%',
+        '2/3': '66%',
+        '3/3': '100%',
+      }
+    }
   },
   variants: {},
   plugins: [],

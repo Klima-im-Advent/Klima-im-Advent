@@ -1,6 +1,15 @@
 const body = document.getElementsByTagName('body')[0];
 const list = document.getElementsByTagName('ul')[0];
 
+const resizeHandler = 
+  () => 
+    document.documentElement.style.setProperty(
+        "--inner-screen-height",
+        window.innerHeight + "px");
+
+window.addEventListener('resize', resizeHandler);
+resizeHandler();
+
 
 let currentSwiping: null | "slider" | "overview" = null;
 
@@ -18,7 +27,7 @@ const translateBy = (x: number, smooth: boolean) => {
 let startX = 0;
 let lastX = 0;
 body.addEventListener(
-  'touchstart',
+  "touchstart",
   (event) => {
     if (currentSwiping === null) {
       currentSwiping = "slider";
@@ -27,7 +36,7 @@ body.addEventListener(
     }
   });
 body.addEventListener(
-  'touchmove',
+  "touchmove",
   (event) => {
     event.preventDefault();
     if ( currentSwiping === "slider") {
@@ -43,7 +52,7 @@ body.addEventListener(
     passive: false,
   });
 body.addEventListener(
-  'touchend',
+  "touchend",
   (event) => {
     event.preventDefault();
     if ( currentSwiping === "slider") {
@@ -66,8 +75,8 @@ body.addEventListener(
     }
 }); 
 
-const overview = document.getElementById('overview')!;
-const zuckerstange = document.getElementById('zuckerstange')!;
+const overview = document.getElementById("overview")!;
+const zuckerstange = document.getElementById("zuckerstange")!;
 let currentY = 0;
 let currentYTranslate = 0;
 let isUp = false;
@@ -77,7 +86,6 @@ for (const item of [overview, zuckerstange])
     if (currentSwiping === null) {
       const touch = event.touches[0];
       currentY = touch.screenY;
-      console.log(currentY);
       overview.style.transition = "transform 0s";
 
       currentSwiping = "overview";
@@ -85,16 +93,14 @@ for (const item of [overview, zuckerstange])
   });
 
   item.addEventListener('touchmove', (event) => {
+    event.preventDefault();
     if (currentSwiping === "overview") {
       const touch = event.touches[0];
-      console.log(currentY);
-      console.log(touch.screenY);
-      console.log(touch);
       const distance = touch.screenY - currentY;
       currentYTranslate += distance;
       currentY += distance;
       overview.style.transform =
-        "translate3d(0," + Math.max(currentYTranslate, -(screen.height + 10)) + "px,0)";
+        "translate3d(0," + Math.max(currentYTranslate, -screen.height) + "px,0)";
     }
   });
   item.addEventListener('touchend', (event) => {
@@ -105,7 +111,7 @@ for (const item of [overview, zuckerstange])
         threshold = 4 * screen.height / 5;
       }
       if (Math.abs(currentYTranslate) > threshold) {
-        overview.style.transform = "translate3d(0,-100vh,0)";
+        overview.style.transform = "translate3d(0," + -screen.height + "px,0)";
         currentYTranslate = -screen.height;
         isUp = true;
       } else {
