@@ -2,16 +2,19 @@ const body = document.getElementsByTagName('body')[0];
 const list = document.getElementsByTagName('ul')[0];
 
 const resizeHandler = 
-  () => 
+  () => {
     document.documentElement.style.setProperty(
         "--inner-screen-height",
-        window.innerHeight + "px");
+        window.innerHeight + "px")
+};
 
 window.addEventListener('resize', resizeHandler);
 resizeHandler();
 
 
 let currentSwiping: null | "slider" | "overview" = null;
+
+
 
 let currentXTranslate = 0;
 const translateBy = (x: number, smooth: boolean) => {
@@ -20,9 +23,10 @@ const translateBy = (x: number, smooth: boolean) => {
   } else {
     list.style.transition = "transform 0s ease 0s";
   }
-  currentXTranslate =
-    Math.min(list.getBoundingClientRect().width - 0.9 * screen.width, currentXTranslate + x);
-  list.style.transform = "translate3d(-" + currentXTranslate + "px,0,0)";
+	currentXTranslate    = Math.min(list.getBoundingClientRect().width
+                                 - 0.9 * document.body.clientWidth,
+                               currentXTranslate + x);
+	list.style.transform = "translate3d(-" + currentXTranslate + "px,0,0)";
 };
 let startX = 0;
 let lastX = 0;
@@ -57,7 +61,7 @@ body.addEventListener(
     event.preventDefault();
     if ( currentSwiping === "slider") {
 
-      const elementWidth = 0.9 * screen.width;
+      const elementWidth = 0.9 * document.body.clientWidth;
       const remainder = currentXTranslate % elementWidth;
 
       let breakpoint = null;
@@ -100,19 +104,21 @@ for (const item of [overview, zuckerstange])
       currentYTranslate += distance;
       currentY += distance;
       overview.style.transform =
-        "translate3d(0," + Math.max(currentYTranslate, -screen.height) + "px,0)";
+        "translate3d(0,"
+        + Math.max(currentYTranslate, -document.body.clientHeight) + "px,0)";
     }
   });
   item.addEventListener('touchend', (event) => {
     if (currentSwiping === "overview") {
       overview.style.transition = "transform 0.3s";
-      let threshold = screen.height / 5;
+      let threshold = document.body.clientHeight / 5;
       if (isUp) {
-        threshold = 4 * screen.height / 5;
+        threshold = 4 * document.body.clientHeight / 5;
       }
       if (Math.abs(currentYTranslate) > threshold) {
-        overview.style.transform = "translate3d(0," + -screen.height + "px,0)";
-        currentYTranslate = -screen.height;
+        overview.style.transform =
+          "translate3d(0," + -document.body.clientHeight + "px,0)";
+        currentYTranslate = -document.body.clientHeight;
         isUp = true;
       } else {
         overview.style.transform = "translate3d(0,0,0)";
