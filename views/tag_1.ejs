@@ -2,29 +2,98 @@
 <html>
   <head>
     <title>
-      Tag 1
+      Türchen 1 – Klima im Advent
     </title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/css/style.css">
     <%- include("matomo") %>
+<style>
+#hoofs-left-1, #hoofs-left-2, #hoofs-right-1, #hoofs-right-2 {
+  transition: opacity 0.3s;
+}
+
+#hoofs-left-1 {
+  transform: translate3d(var(--hoof-l-1-x),var(--hoof-l-1-y),0);
+  opacity: var(--hoof-l-1-opacity, 1);
+}
+#hoofs-left-2 {
+  transform: translate3d(var(--hoof-l-2-x),var(--hoof-l-2-y),0);
+  opacity: var(--hoof-l-2-opacity, 1);
+}
+#hoofs-right-1 {
+  transform: translate3d(var(--hoof-r-1-x),var(--hoof-r-1-y),0);
+  opacity: var(--hoof-r-1-opacity, 1);
+}
+#hoofs-right-2 {
+  transform: translate3d(var(--hoof-r-2-x),var(--hoof-r-2-y),0);
+  opacity: var(--hoof-r-2-opacity, 1);
+}
+</style>
   </head>
-  <body class="w-screen bg-green-light">
-    <div class="flex flex-col bg-white max-w-lg mx-auto shadow-2xl">
+  <body class="w-full bg-white">
+    <img
+      src="/hoofs_left_2.png"
+      class="absolute left-0 top-0"
+      id="hoofs-left-2">
+    <img
+      src="/hoofs_right_2.png"
+      class="absolute left-0 top-0"
+      id="hoofs-right-2">
+    <img
+      src="/hoofs_left_1.png"
+      class="absolute left-0 top-0"
+      id="hoofs-left-1">
+    <img
+      src="/hoofs_right_1.png"
+      class="absolute left-0 top-0"
+      id="hoofs-right-1">
+    <div class="flex flex-col bg-white max-w-lg mx-auto">
       <header>
         <img src="/lichterkette.jpg" class="w-full">
       </header>
       <main class="mt-5 -mr-4 px-12 pb-10">
         <div class="flex items-center justify-between">
           <h1 class="font-bold text-3xl leading-tight mb-2 mr-2">
-            Weihnachten tralala!
+            Türchen 1: Aufgehts – Abgehts
           </h1>
           <img src="/pinguin.png" class="w-12">
         </div>
         <p class="text-lg leading-tight my-4 font-bold">
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-          eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-          voluptua!
+          "Laaast Christmas, I gave you my heart, but the very next day, you gave
+          it away! This year..."
+
+          "Oh *Gähn* ist es schon wieder so weit?", grummelt der Weihnachtsmann
+          verschlafen in seinen Bart während er versucht mit einer Hand seinen
+          neuen Wecker auszustellen und mit der anderen, nicht aus dem Bett zu
+          fallen. Das klappt nicht so ganz: Das Ausschalten des Weckers hat
+          geklappt, doch dafür liegt er jetzt auf dem Boden.
+
+          Widerstrebend steht er auf und reckt sich. Nachdem er einen Augenblick
+          überlegt sich wieder hinzulegen öffnet er seinen Kleiderschrank und
+          nimmt aus den 25 rot/weißen Outfits genau das richtige für den ersten
+          Advent, zieht sich an und bewundert sich ein wenig im Spiegel.
+          Irgendwie erschien ihm sein Bart heute noch schlohweißer als sonst.
+
+          "Na dann geht es wohl mal los", sagte er motiviert und ging nach
+          draußen, wo die Elfen schon fleißig dabei waren seinen Wagen für die
+          erste Testfahrt vorzubereiten.
+
+          Stolz sah er dabei zu wie sie sich fleißig ans Werk machten, jeden
+          Teil genau überprüften, um sicherzugehen, dass auch ja nichts
+          schiefgeht.
+
+          "Guten Morgen Santa", begrüßte ihn die Größte der Elfen, "Auch mal
+          aufgestanden?". "Kommt erstmal in mein Alter", grummelte er daraufhin
+          zurück, was mit allgemeinen Lachen beantwortet wurde.
+
+          "Und Sophia, wie sieht es aus?", fragte er, worauf sie antwortete:
+          "Gut! Die Rentiere stehen bereit und der Wagen ist natürlich auch wie
+          neu". "Wie immer, bester Service", erwiderte er lächelnd, "Ich würde
+          dann jetzt auch los zur ersten Testfahrt zu Ricardo fahren".
+
+          Während er es sich im Schlitten bequem machte, brachten die Elfen alle
+          Rentiere in Position und los ging es für ihn:
         </p>
         <p class="my-4">
           At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
@@ -49,5 +118,7 @@
         </p>
       </main>
     </div>
+    <script src="/js/tag_1.js">
+    </script>
   </body>
 </html>
