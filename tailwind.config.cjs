@@ -12,6 +12,7 @@ module.exports = {
       sans: 'Jost',
     },
     colors: {
+      grey: "#C4C4C4",
       white: "#FCF7F8",
       brown: "#61310D",
       green: {
