@@ -48,7 +48,7 @@ class Hoof {
       this.isVanishing = false;
       this.y -= 100;
       if (this.y < 0) {
-        this.y = document.body.clientHeight + this.y;
+        this.y = document.body.clientHeight + this.y - 70;
       }
       document.documentElement.style.setProperty(
         "--" + this.cssPrefix + "-y",

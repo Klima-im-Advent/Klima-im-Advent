@@ -56,6 +56,13 @@
       height: 123px;
       width: 104vw;
     }
+    header {
+      background: url(background_sign.png);
+    }
+
+    header h1 {
+      background: url(sign.png);
+    }
   </style>
   <%- include("matomo") %>
 
@@ -66,36 +73,33 @@
        overflow-y-hidden overflow-x-scroll lg:overflow-visible"
   >
   <main class="h-screen lg:h-auto lg:w-full">
-    <div class="hidden lg:block">
-      <div class="w-full">
-        <h1 class="mt-12 text-center text-6xl font-bold leading-none">
-          Viertes Türchen
+    <header class="hidden lg:block bg-cover bg-center">
+      <div class="block mx-auto flex">
+        <h1
+          class="text-center text-6xl font-bold leading-none text-white
+          bg-center mx-auto p-32 bg-cover"
+          >
+          Erstes Türchen
         </h1>
-        <p class="text-center text-5xl leading-tight">
-          Titel Titel Titel Titel Titel
-        </p>
-      </div>
-      <div class="bg-white w-full">
+      </header>
+      <div class="bg-white w-full flex flex-col">
         <div class="max-w-xl mx-auto pt-5">
-          <p class="mb-5">
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-            eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-            voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-            clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
-            amet.
-          </p>
-          <p>
-            At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
-            gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet!
+            <p class="mb-5">
+            Der Weihnachtsmann ist aufgeregt:
+            </br>
+            Sein Training beginnt pünktlich zum
+            1. Dezember. Öffne das das erste Türchen, um den Weihnachtsmann und
+            seinen Elfen und Wichteln zu helfen, dieses Weihnachten zu feiern!
           </p>
         </div>
-        <button
+        <a
+          href="/tag/1"
           class=
             "block mx-auto text-white bg-grey rounded-full font-extrabold
-             text-2xl px-10 py-1 my-shadow mb-3"
+             text-2xl px-10 py-1 my-shadow mb-3 bg-green-dark"
           >
-          CTA Button!
-        </button>
+          Türchen öffnen
+        </a>
         <button
           class=
             "block mx-auto my-shadow rounded-full font-extrabold text-2xl
