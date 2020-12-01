@@ -29,29 +29,33 @@
   transform: translate3d(var(--hoof-r-2-x),var(--hoof-r-2-y),0);
   opacity: var(--hoof-r-2-opacity, 1);
 }
+#game {
+  width: 100%;
+  height: 50vw;
+}
 </style>
   </head>
   <body class="w-full bg-white">
     <img
       src="/hoofs_left_2.png"
-      class="absolute left-0 top-0"
+      class="absolute left-0 top-0 hidden lg:block"
       id="hoofs-left-2">
     <img
       src="/hoofs_right_2.png"
-      class="absolute left-0 top-0"
+      class="absolute left-0 top-0 hidden lg:block"
       id="hoofs-right-2">
     <img
       src="/hoofs_left_1.png"
-      class="absolute left-0 top-0"
+      class="absolute left-0 top-0 hidden lg:block"
       id="hoofs-left-1">
     <img
       src="/hoofs_right_1.png"
-      class="absolute left-0 top-0"
+      class="absolute left-0 top-0 hidden lg:block"
       id="hoofs-right-1">
     <div
       class="flex flex-col bg-white max-w-xl mx-auto"
       >
-      <main class="mt-5 -mr-4 px-12 pb-10 bg-red-light">
+      <main class="mt-5 -mr-4 px-12 pb-3">
         <div class="flex items-center justify-between">
           <h1
             class="font-bold text-3xl leading-tight mb-2 mr-2 relative">
@@ -60,50 +64,58 @@
           <img src="/pinguin.png" class="w-12">
         </div>
         <p class="text-lg leading-tight my-4 font-bold">
-          "Laaast Christmas, I gave you my heart, but the very next day, you gave
-          it away! This year..."
-        </p>
-        <p>
-          "Oh *Gähn* ist es schon wieder so weit?", grummelt der Weihnachtsmann
-          verschlafen in seinen Bart während er versucht mit einer Hand seinen
-          neuen Wecker auszustellen und mit der anderen, nicht aus dem Bett zu
-          fallen. Das klappt nicht so ganz: Das Ausschalten des Weckers hat
-          geklappt, doch dafür liegt er jetzt auf dem Boden.
-        </p>
-        <p>
-          Widerstrebend steht er auf und reckt sich. Nachdem er einen Augenblick
-          überlegt sich wieder hinzulegen öffnet er seinen Kleiderschrank und
-          nimmt aus den 25 rot/weißen Outfits genau das richtige für den ersten
-          Advent, zieht sich an und bewundert sich ein wenig im Spiegel.
-          Irgendwie erschien ihm sein Bart heute noch schlohweißer als sonst.
-        </p>
-        <p>
-          "Na dann geht es wohl mal los", sagte er motiviert und ging nach
-          draußen, wo die Elfen schon fleißig dabei waren seinen Wagen für die
-          erste Testfahrt vorzubereiten.
-        </p>
-        <p>
-          Stolz sah er dabei zu wie sie sich fleißig ans Werk machten, jeden
-          Teil genau überprüften, um sicherzugehen, dass auch ja nichts
-          schiefgeht.
-        </p>
-        <p>
-          "Guten Morgen Santa", begrüßte ihn die Größte der Elfen, "Auch mal
-          aufgestanden?". "Kommt erstmal in mein Alter", grummelte er daraufhin
-          zurück, was mit allgemeinen Lachen beantwortet wurde.
-        </p>
-        <p>
-          "Und Sophia, wie sieht es aus?", fragte er, worauf sie antwortete:
-          "Gut! Die Rentiere stehen bereit und der Wagen ist natürlich auch wie
-          neu". "Wie immer, bester Service", erwiderte er lächelnd, "Ich würde
-          dann jetzt auch los zur ersten Testfahrt zu Ricardo fahren".
-        </p>
-        <p>
-          Während er es sich im Schlitten bequem machte, brachten die Elfen alle
-          Rentiere in Position und los ging es für ihn:
-        </p>
+"Laaast Christmas, I gave you my heart, but the very next day, you gave it away! Thiiis year..."                        
+</p>
+<p>
+ "Oh *Gähn* ist es schon wieder so weit?", grummelt der Weihnachtsmann verschlafen in seinen Bart, während er versucht mit einer Hand seinen neuen Wecker auszustellen und sich mit der anderen verzweifelt bemüht, nicht aus dem Bett zu fallen. Das funktioniert allerdings nicht so ganz: Das Ausschalten des Weckers hat geklappt, doch dafür liegt er jetzt auf dem Boden.                        
+ </p>
+ <p>
+ Immer noch müde steht er auf und streckt sich. Nachdem er einen Augenblick lang überlegt sich wieder hinzulegen, öffnet er seinen Kleiderschrank und findet in den 25 rot/weißen Outfits genau das Richtige für einen ersten Advent. Dann zieht er sich an und bewundert sich ein wenig im Spiegel. Irgendwie erscheint ihm sein Bart heute noch weißer als sonst.                        
+ </p>
+ <p>
+ "Na dann wollen wir mal!", sagt er motiviert und geht nach draußen, wo die
+ Elfen schon fleißig dabei sind, seinen Schlitten für die erste Testfahrt
+ vorzubereiten.
+ </p>
+ <p>
+ Voller Vorfreude auf die kommende Zeit sieht er dabei zu, wie sie sich fleißig ans Werk machen jedes Teil genau zu überprüfen, um sicherzugehen, dass auch ja nichts schiefgeht.                        
+ </p>
+ <p>
+ "Guten Morgen Santa", begrüßt ihn die älteste der Elfen, "Auch mal aufgestanden?". "Kommt ihr erstmal in mein Alter", grummelt er daraufhin zurück, was mit allgemeinem Gelächter beantwortet wird.                        
+ </p>
+ <p>
+ "Und Sophia, wie sieht es aus?", fragt er, und sie antwortet stolz: "Sehr gut! Die Rentiere stehen bereit und der Schlitten blitzt auch wie neu". "Wie immer, perfekter Service", erwidert er lächelnd, "Ich müsste dann jetzt auch los, die Testfahrt zu Ricardo steht an".                        
+ </p>
+ <p>
+ Während er es sich im Schlitten bequem macht, bringen die Elfen alle Rentiere
+ in Position und schon machen sie sich auf den Weg: <br>
+ [Springen mit Leertaste/Touch]
+ </p>
       </main>
     </div>
+    <div class="relative">
+      <iframe
+        src="https://klimaimadvent.de/dino/"
+        class="relative mx-auto mb-5"
+        id="game">
+      </iframe>
+    </div>
+    <p class="max-w-xl mx-auto">
+Dir hat unser Spiel gefallen und du bist neugierig, was die nächsten Wochen noch
+auf dich wartet? Folge unseren Social Media Kanälen und komm auf WhatsApp oder
+Telegram in unseren Channel, um immer up to date zu sein!
+    </p>
+    <p class="max-w-xl mx-auto">
+    Instagram & Twitter: @klimaimadvent <br>
+    WhatsApp:
+      <a href="https://fffutu.re/KlimaImAdvent-WA-Info">
+        https://fffutu.re/KlimaImAdvent-WA-Info
+      </a><br>
+    Telegram:
+      <a href="https://fffutu.re/KlimaImAdvent-TG-Info">
+        https://fffutu.re/KlimaImAdvent-TG-Info
+      </a>
+    </p>
     <script src="/js/tag_1.js">
     </script>
   </body>
