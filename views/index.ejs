@@ -19,14 +19,6 @@
     li {
       width: 90vw;
     }
-    .dark-edges {
-      background:
-        linear-gradient(
-          .25turn,
-          rgba(0,0,0,.5), transparent 7%,
-          transparent 93%, rgba(0,0,0,.5));
-      pointer-events: none;
-    }
     ul {
       transition: transform 0.3s;
     }
@@ -69,7 +61,6 @@
       background: url(sign.png);
     }
   </style>
-  <%- include("matomo") %>
 
 </head>
 <body
@@ -105,13 +96,22 @@
           >
           Türchen öffnen
         </a>
-        <button
-          class=
-            "block mx-auto my-shadow rounded-full font-extrabold text-2xl
-             px-10 py-1 relative"
-          >
-          Jetzt Teilen!
-        </button>
+     <p class="max-w-xl mx-auto relative">
+Dir hat unser Spiel gefallen und du bist neugierig, was die nächsten Wochen noch
+auf dich wartet? Folge unseren Social Media Kanälen und komm auf WhatsApp oder
+Telegram in unseren Channel, um immer up to date zu sein!
+    </p>
+    <p class="max-w-xl mx-auto relative">
+    Instagram & Twitter: @klimaimadvent <br>
+    WhatsApp:
+      <a href="https://fffutu.re/KlimaImAdvent-WA-Info">
+        https://fffutu.re/KlimaImAdvent-WA-Info
+      </a><br>
+    Telegram:
+      <a href="https://fffutu.re/KlimaImAdvent-TG-Info">
+        https://fffutu.re/KlimaImAdvent-TG-Info
+      </a>
+    </p> 
       </div>
     </div>
     <div class="h-inner-screen lg:hidden bg-cover bg-center" id="door-mobile">

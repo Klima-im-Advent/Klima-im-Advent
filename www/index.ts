@@ -58,7 +58,6 @@ body.addEventListener(
 body.addEventListener(
   "touchend",
   (event) => {
-    event.preventDefault();
     if ( currentSwiping === "slider") {
 
       const elementWidth = 0.9 * document.body.clientWidth;
@@ -129,4 +128,7 @@ for (const item of [overview, zuckerstange])
       currentSwiping = null;
     }
   });
+}
+function stopProp(event: Event) {
+  alert("test");
 }
