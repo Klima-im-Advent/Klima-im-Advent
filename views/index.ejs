@@ -95,17 +95,17 @@
           class="text-center text-6xl font-bold leading-none text-white
           bg-center mx-auto p-32 bg-cover"
           >
-          Erstes Türchen
+          Zweites Türchen
         </h1>
       </header>
       <div class="bg-white w-full flex-col hidden lg:flex">
         <div class="max-w-xl mx-auto pt-5">
             <p class="mb-5">
-            Der Weihnachtsmann ist aufgeregt:
+            Nach dem anstrengenden ersten Advent haben wir uns alle ein
+            bisschen Entspannung verdient, und wie entspannt es sich am
+            Besten?
             </br>
-            Sein Training beginnt pünktlich zum
-            1. Dezember. Öffne das das erste Türchen, um den Weihnachtsmann und
-            seinen Elfen und Wichteln zu helfen, dieses Weihnachten zu feiern!
+            Mit einer schönen Tasse warmen Kakao natürlich.
           </p>
         </div>
         <a
@@ -117,7 +117,7 @@
           Türchen öffnen
         </a>
      <p class="max-w-xl mx-auto relative">
-Dir hat unser Spiel gefallen und du bist neugierig, was die nächsten Wochen noch
+Dir gefällt unser Kalender und du bist neugierig, was die nächsten Wochen noch
 auf dich wartet? Folge unseren Social Media Kanälen und komm auf WhatsApp oder
 Telegram in unseren Channel, um immer up to date zu sein!
     </p>
@@ -136,7 +136,7 @@ Telegram in unseren Channel, um immer up to date zu sein!
     </div>
     <div class="h-inner-screen lg:hidden bg-cover bg-center" id="door-mobile">
       <ul class="flex flex-none item-center overflow-hidden h-full">
-        <% for (let i = 1; i < 2; ++i) {%>
+        <% for (let i = 1; i < 3; ++i) {%>
         <li class="flex items-center justify-center overflow-hidden">
           <a href="/tag/1">
             <img src="/background_<%=i%>.png" class="mysterious-element">
@@ -159,7 +159,12 @@ Telegram in unseren Channel, um immer up to date zu sein!
       <div class="items-center flex z-10
         overflow-hidden lg:overflow-visible">
         <% for (let j = 1; j < 7; ++j) {%>
-        <a class="w-2/12">
+        <a
+          class="w-2/12"
+          <% if (i * 6 + j < 3) { %>
+          href="/tag/<%=i * 6 + j%>"
+          <% } %>
+          >
           <img src="/background_<%=i * 6 + j%>.png">
         </a>
         <% } %>

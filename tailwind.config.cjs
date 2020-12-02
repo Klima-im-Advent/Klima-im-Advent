@@ -12,9 +12,11 @@ module.exports = {
       sans: 'Jost',
     },
     colors: {
+      black: "#2A2A2A",
       grey: "#C4C4C4",
       white: "#FCF7F8",
       brown: "#61310D",
+      pink: "#EEA9BA",
       green: {
         "light": "#5B7D42",
         "dark": "#005406"
