@@ -16,7 +16,8 @@ let currentSwiping: null | "slider" | "overview" = null;
 
 
 
-let currentXTranslate = 0;
+let currentXTranslate = 0.9 * document.body.clientWidth;
+list.style.transform = "translate3d(-" + currentXTranslate + "px,0,0)";
 const translateBy = (x: number, smooth: boolean) => {
   if (smooth) {
     list.style.transition = "transform 0.3s";
