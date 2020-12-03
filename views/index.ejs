@@ -95,21 +95,20 @@
           class="text-center text-6xl font-bold leading-none text-white
           bg-center mx-auto p-32 bg-cover"
           >
-          Zweites Türchen
+          Drittes Türchen
         </h1>
       </header>
       <div class="bg-white w-full flex-col hidden lg:flex">
         <div class="max-w-xl mx-auto pt-5">
-            <p class="mb-5">
-            Nach dem anstrengenden ersten Advent haben wir uns alle ein
-            bisschen Entspannung verdient, und wie entspannt es sich am
-            Besten?
-            </br>
-            Mit einer schönen Tasse warmen Kakao natürlich.
+          <p class="mb-5">
+             Am dritten Tag unseres Adventskalenders sagen wir einmal danke!
+             Wir nehmen uns viel zu selten Zeit dankbar zu sein und auch der
+             Weihnachtsmann nimmt sich heute einmal die Zeit in seinem Buch
+             nachzuschauen, wer mehr Dankbarkeit verdient...
           </p>
         </div>
         <a
-          href="/tag/2"
+          href="/tag/3"
           class=
             "block mx-auto text-white bg-grey rounded-full font-extrabold
              text-2xl px-10 py-1 my-shadow mb-3 bg-green-dark"
@@ -121,14 +120,23 @@ Dir gefällt unser Kalender und du bist neugierig, was die nächsten Wochen noch
 auf dich wartet? Folge unseren Social Media Kanälen und komm auf WhatsApp oder
 Telegram in unseren Channel, um immer up to date zu sein!
     </p>
+     <div
+       class="flex max-w-md w-full mx-auto rounded-3xl bg-green-dark p-2
+       justify-around items-center"
+       >
+      <a class="w-16" href="https://instagram.com/klimaimadvent">
+        <img src="instagram.png">
+      </a>
+      <a class="w-16" href="https://instagram.com/klimaimadvent">
+        <img src="twitter.png">
+      </a>
+      <a class="w-16" href="https://instagram.com/klimaimadvent">
+        <img src="whatsapp.png">
+      </a>
+    </div> 
     <p class="max-w-xl mx-auto relative">
-    Instagram & Twitter: @klimaimadvent <br>
-    WhatsApp:
-      <a href="https://fffutu.re/KlimaImAdvent-WA-Info">
-        https://fffutu.re/KlimaImAdvent-WA-Info
-      </a><br>
-    Telegram:
-      <a href="https://fffutu.re/KlimaImAdvent-TG-Info">
+      Telegram:
+      <a href="https://fffutu.re/KlimaImAdvent-TG-Info" class="text-green-dark">
         https://fffutu.re/KlimaImAdvent-TG-Info
       </a>
     </p> 
@@ -136,7 +144,7 @@ Telegram in unseren Channel, um immer up to date zu sein!
     </div>
     <div class="h-inner-screen lg:hidden bg-cover bg-center" id="door-mobile">
       <ul class="flex flex-none item-center overflow-hidden h-full">
-        <% for (let i = 1; i < 3; ++i) {%>
+        <% for (let i = 1; i < 4; ++i) {%>
         <li class="flex items-center justify-center overflow-hidden">
           <a href="/tag/<%=i%>">
             <img src="/background_<%=i%>.png" class="mysterious-element">
@@ -161,7 +169,7 @@ Telegram in unseren Channel, um immer up to date zu sein!
         <% for (let j = 1; j < 7; ++j) {%>
         <a
           class="w-2/12"
-          <% if (i * 6 + j < 3) { %>
+          <% if (i * 6 + j < 4) { %>
           href="/tag/<%=i * 6 + j%>"
           <% } %>
           >
