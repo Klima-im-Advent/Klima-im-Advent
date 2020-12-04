@@ -1,0 +1,148 @@
+<!doctype html>
+<html>
+  <head>
+    <title>
+      Türchen 5 – Klima im Advent
+    </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:site" content="@klimaimadvent"/>
+    <meta name="twitter:title" content = "Klima im Advent" />
+    <meta
+      name = "twitter:description"
+      content = "An diesem Donnerstag bedanken wir uns bei einer Organisation, die für klimagerechte und soziale Landwirtschaft kämpft"/>
+    <meta name = "twitter:image" content="/twitter_preview.jpg"/> 
+    <link rel="icon" href="/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="/favicon-57.png" sizes="57x57">
+    <link rel="icon" href="/favicon-76.png" sizes="76x76">
+    <link rel="icon" href="/favicon-96.png" sizes="96x96">
+    <link rel="icon" href="/favicon-128.png" sizes="128x128">
+    <link rel="icon" href="/favicon-192.png" sizes="192x192">
+    <link rel="icon" href="/favicon-228.png" sizes="228x228">
+    <link rel="shortcut icon" sizes="196x196" href="/favicon-196.png">
+    <link rel="apple-touch-icon" href="/favicon-120.png" sizes="120x120">
+    <link rel="apple-touch-icon" href="/favicon-152.png" sizes="152x152">
+    <link rel="apple-touch-icon" href="/favicon-180.png" sizes="180x180">
+    <meta name="msapplication-TileColor" content="#9a5c51">
+    <meta name="msapplication-TileImage" content="/favicon-144.png">
+    <meta name="msapplication-config" content="/browserconfig.xml" />  
+    <%- include("matomo") %>
+<style>
+@font-face {
+  font-family: "Elena";
+  src: url("/fonts/elena.ttf");
+}
+.elena-font {
+  font-family: Elena
+}
+#hoofs-left-1, #hoofs-left-2, #hoofs-right-1, #hoofs-right-2 {
+  transition: opacity 0.6s;
+}
+
+#hoofs-left-1 {
+  transform: translate3d(var(--hoof-l-1-x),var(--hoof-l-1-y),0);
+  opacity: var(--hoof-l-1-opacity, 1);
+}
+#hoofs-left-2 {
+  transform: translate3d(var(--hoof-l-2-x),var(--hoof-l-2-y),0);
+  opacity: var(--hoof-l-2-opacity, 1);
+}
+#hoofs-right-1 {
+  transform: translate3d(var(--hoof-r-1-x),var(--hoof-r-1-y),0);
+  opacity: var(--hoof-r-1-opacity, 1);
+}
+#hoofs-right-2 {
+  transform: translate3d(var(--hoof-r-2-x),var(--hoof-r-2-y),0);
+  opacity: var(--hoof-r-2-opacity, 1);
+}
+#game {
+  width: 100%;
+  height: 50vw;
+}
+ul > li::before {
+  content: '';
+  background-image: url(/weihnachtsmütze.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: inline-block;
+  width: 1.9rem;
+  transform: translateY(0.3rem);
+  height: 2rem;
+  margin-left: -2rem;
+}
+#facts, #facts > * {
+  max-height: 85vh;
+}
+</style>
+  </head>
+  <body class="w-full text-white bg-black px-3 pt-3">
+    <div class="block" id="facts">
+      <img
+        src="/mandelbude.png"
+        alt=""
+        class="mx-auto rounded-3xl border-2 max-h-full">
+    </div>
+    <div>
+    <div class="flex items-center justify-around">
+      <div class="hidden lg:block">
+        <img src="/erde.png" class="w-32">
+      </div>
+      <div class="text-lg max-w-xl flex flex-col content-center mt-12">
+        <div class="flex items-center justify-between">
+          <h1 class="font-bold text-4xl leading-tight mb-2 mr-2">
+            Türchen 5: Gebrannte Mandeln
+          </h1>
+          <img src="/mond.png" class="w-24">
+        </div>
+        <p>
+          Das war schön! Der Weihnachtsmann fühlte sich schon viel energiereicher 
+          und bewegte sich nun aus seinem Raum, um zu schauen was seine Elfchen arbeiteten. 
+          In den letzten Jahrzehnten wurden seine Rundgänge immer kürzer, da alle Spielzeugmanufakturen 
+          immer näher zusammengerückt werden mussten, um genügend sicheren Halt auf dem immer kleiner 
+          werdenden Nordpol zu bewahren. Wie immer waren alle fleißig und fröhlich bei der Arbeit, der 
+          Schnee rieselte friedlich auf die Hüte der Elfchen und sie sangen gemeinsam lautstark „Last Christmas“. 
+          Es erfüllte ihn mit Fröhlichkeit sie so zu sehen, deshalb fasste er den Entschluss ihnen etwas Gutes zutun. 
+          Er begab sich in die Küche und begann gebrannte Mandeln für alle herzustellen, dafür nahm er…
+        </p>
+        <img src="/Mandelrezept.jpg" alt="Bhutan ist ein Land in Südasien das als einziges Land weltweit eine negative CO2-Bilanz aufweist. Umweltschutz steht dort über allem anderen und mehr als 2/3 der Fläche ist bewaldet und wird ausschließlich ökologisch nachhaltig genutzt.">
+        <p>
+          <b>Zutaten</b><br>
+          200g ganze Mandeln mit Schale<br>
+          250g Zucker<br>
+          250ml Wasser<br>
+          2 Teelöffel Zimt<br>
+          <br>
+          <b>Zubereitung</b>
+          <br>
+          Alle Zutaten zusammen in eine Pfanne geben und auf den Herd stellen. Am besten legt ihr euch auch gleich ein Blatt Backpapier neben den Herd. Auf mittlerer Hitze solange kochen, bis das Wasser verdampft ist. Wenn der Zucker anfängt zu krümeln sind die Mandeln fertig. Die Mischung auf ein Backblech geben und abkühlen lassen.
+          Wirklich vorzüglich! 
+        </p>
+        <p>
+          Was ist euer Lieblings Klimafakt?
+          Schreibt ihn uns auf
+          <a
+            href="https://instagram.com/klimaimadvent"
+            class="text-green-light"
+            >
+            Instagram
+          </a>
+          oder
+          <a
+            href="https://twitter.com/klimaimadvent"
+            class="text-green-light"
+            >
+            Twitter
+          </a>
+          damit wir ihn auch teilen können
+        </p>
+      </div>
+      <div class="hidden sm:block">
+        <img src="/erde2.png" class="w-32">
+      </div>
+    </div>
+  </body>
+</html>

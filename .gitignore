@@ -2,3 +2,4 @@ node_modules
 bin/
 .eslintcache
 static/css/style.css
+.DS_Store
