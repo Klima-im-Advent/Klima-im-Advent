@@ -43,14 +43,16 @@ body.addEventListener(
 body.addEventListener(
   "touchmove",
   (event) => {
-    event.preventDefault();
-    if ( currentSwiping === "slider") {
-      const currentX = event.touches[0].clientX;
-      const distance = lastX - currentX;
+    if (document.documentElement.clientWidth < 1024) {
+      event.preventDefault();
+      if ( currentSwiping === "slider") {
+        const currentX = event.touches[0].clientX;
+        const distance = lastX - currentX;
 
-      translateBy(distance, false);
+        translateBy(distance, false);
 
-      lastX = event.touches[0].clientX;
+        lastX = event.touches[0].clientX;
+      }
     }
   },
   {
@@ -97,15 +99,17 @@ for (const item of [overview, zuckerstange])
   });
 
   item.addEventListener('touchmove', (event) => {
-    event.preventDefault();
-    if (currentSwiping === "overview") {
-      const touch = event.touches[0];
-      const distance = touch.screenY - currentY;
-      currentYTranslate += distance;
-      currentY += distance;
-      overview.style.transform =
-        "translate3d(0,"
-        + Math.max(currentYTranslate, -document.body.clientHeight) + "px,0)";
+    if (document.documentElement.clientWidth < 1024) {
+      event.preventDefault();
+      if (currentSwiping === "overview") {
+        const touch = event.touches[0];
+        const distance = touch.screenY - currentY;
+        currentYTranslate += distance;
+        currentY += distance;
+        overview.style.transform =
+          "translate3d(0,"
+          + Math.max(currentYTranslate, -document.body.clientHeight) + "px,0)";
+      }
     }
   });
   item.addEventListener('touchend', (event) => {
