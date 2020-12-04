@@ -1,12 +1,12 @@
 const body = document.getElementsByTagName('body')[0];
 const list = document.getElementsByTagName('ul')[0];
 
-const resizeHandler = 
+const resizeHandler =
   () => {
     document.documentElement.style.setProperty(
-        "--inner-screen-height",
-        window.innerHeight + "px")
-};
+      "--inner-screen-height",
+      window.innerHeight + "px")
+  };
 
 window.addEventListener('resize', resizeHandler);
 resizeHandler();
@@ -15,8 +15,9 @@ resizeHandler();
 let currentSwiping: null | "slider" | "overview" = null;
 
 
-
-let currentXTranslate = 2 * 0.9 * document.body.clientWidth;
+// HIER DIE VERSCHIEBUNG NACH X EINGEBEN / DIE VERSCHIEBUNG ZUM TAG
+// TODO: ALLES KOMMENTIEREN!!!!
+let currentXTranslate = 4 * 0.9 * document.body.clientWidth;
 list.style.transform = "translate3d(-" + currentXTranslate + "px,0,0)";
 const translateBy = (x: number, smooth: boolean) => {
   if (smooth) {
@@ -24,10 +25,10 @@ const translateBy = (x: number, smooth: boolean) => {
   } else {
     list.style.transition = "transform 0s ease 0s";
   }
-	currentXTranslate    = Math.min(list.getBoundingClientRect().width
-                                 - 0.9 * document.body.clientWidth,
-                               currentXTranslate + x);
-	list.style.transform = "translate3d(-" + currentXTranslate + "px,0,0)";
+  currentXTranslate = Math.min(list.getBoundingClientRect().width
+    - 0.9 * document.body.clientWidth,
+    currentXTranslate + x);
+  list.style.transform = "translate3d(-" + currentXTranslate + "px,0,0)";
 };
 let startX = 0;
 let lastX = 0;
@@ -45,7 +46,7 @@ body.addEventListener(
   (event) => {
     if (document.documentElement.clientWidth < 1024) {
       event.preventDefault();
-      if ( currentSwiping === "slider") {
+      if (currentSwiping === "slider") {
         const currentX = event.touches[0].clientX;
         const distance = lastX - currentX;
 
@@ -61,7 +62,7 @@ body.addEventListener(
 body.addEventListener(
   "touchend",
   (event) => {
-    if ( currentSwiping === "slider") {
+    if (currentSwiping === "slider") {
 
       const elementWidth = 0.9 * document.body.clientWidth;
       const remainder = currentXTranslate % elementWidth;
@@ -79,15 +80,14 @@ body.addEventListener(
       }
       currentSwiping = null;
     }
-}); 
+  });
 
 const overview = document.getElementById("overview")!;
 const zuckerstange = document.getElementById("zuckerstange")!;
 let currentY = 0;
 let currentYTranslate = 0;
 let isUp = false;
-for (const item of [overview, zuckerstange])
-{
+for (const item of [overview, zuckerstange]) {
   item.addEventListener('touchstart', (event) => {
     if (currentSwiping === null) {
       const touch = event.touches[0];

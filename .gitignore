@@ -3,3 +3,4 @@ bin/
 .eslintcache
 static/css/style.css
 .DS_Store
+tag_1.js
