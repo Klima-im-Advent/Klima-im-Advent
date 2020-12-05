@@ -2,5 +2,6 @@ node_modules
 bin/
 .eslintcache
 static/css/style.css
+static/js/
 .DS_Store
 tag_1.js
