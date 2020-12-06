@@ -17,7 +17,9 @@ let currentSwiping: null | "slider" | "overview" = null;
 
 // HIER DIE VERSCHIEBUNG NACH X EINGEBEN / DIE VERSCHIEBUNG ZUM TAG
 // TODO: ALLES KOMMENTIEREN!!!!
-let currentXTranslate = 4 * 0.9 * document.body.clientWidth;
+// TODO: Nichts kommentieren, war hart zu schreiben, also sollte es auch hart zu
+// lesen sein
+let currentXTranslate = 5 * 0.9 * document.body.clientWidth;
 list.style.transform = "translate3d(-" + currentXTranslate + "px,0,0)";
 const translateBy = (x: number, smooth: boolean) => {
   if (smooth) {

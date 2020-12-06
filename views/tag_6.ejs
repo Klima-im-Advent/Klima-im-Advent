@@ -1,0 +1,142 @@
+<!doctype html>
+<html>
+  <head>
+    <title>
+      Türchen 6 – Klima im Advent
+    </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:site" content="@klimaimadvent"/>
+    <meta name="twitter:title" content = "Klima im Advent" />
+    <meta
+      name = "twitter:description"
+      content = "Am Nikolaus denken wir daran, was wir uns alle gegenseitig geben"/>
+    <meta name = "twitter:image" content="/twitter_preview.jpg"/> 
+    <link rel="icon" href="/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="/favicon-57.png" sizes="57x57">
+    <link rel="icon" href="/favicon-76.png" sizes="76x76">
+    <link rel="icon" href="/favicon-96.png" sizes="96x96">
+    <link rel="icon" href="/favicon-128.png" sizes="128x128">
+    <link rel="icon" href="/favicon-192.png" sizes="192x192">
+    <link rel="icon" href="/favicon-228.png" sizes="228x228">
+    <link rel="shortcut icon" sizes="196x196" href="/favicon-196.png">
+    <link rel="apple-touch-icon" href="/favicon-120.png" sizes="120x120">
+    <link rel="apple-touch-icon" href="/favicon-152.png" sizes="152x152">
+    <link rel="apple-touch-icon" href="/favicon-180.png" sizes="180x180">
+    <meta name="msapplication-TileColor" content="#9a5c51">
+    <meta name="msapplication-TileImage" content="/favicon-144.png">
+    <meta name="msapplication-config" content="/browserconfig.xml" />  
+    <%- include("matomo") %>
+<style>
+@font-face {
+  font-family: "Elena";
+  src: url("/fonts/elena.ttf");
+}
+.elena-font {
+  font-family: Elena
+}
+#hoofs-left-1, #hoofs-left-2, #hoofs-right-1, #hoofs-right-2 {
+  transition: opacity 0.6s;
+}
+
+#hoofs-left-1 {
+  transform: translate3d(var(--hoof-l-1-x),var(--hoof-l-1-y),0);
+  opacity: var(--hoof-l-1-opacity, 1);
+}
+#hoofs-left-2 {
+  transform: translate3d(var(--hoof-l-2-x),var(--hoof-l-2-y),0);
+  opacity: var(--hoof-l-2-opacity, 1);
+}
+#hoofs-right-1 {
+  transform: translate3d(var(--hoof-r-1-x),var(--hoof-r-1-y),0);
+  opacity: var(--hoof-r-1-opacity, 1);
+}
+#hoofs-right-2 {
+  transform: translate3d(var(--hoof-r-2-x),var(--hoof-r-2-y),0);
+  opacity: var(--hoof-r-2-opacity, 1);
+}
+#game {
+  width: 100%;
+  height: 50vw;
+}
+ul > li::before {
+  content: '';
+  background-image: url(/weihnachtsmütze.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: inline-block;
+  width: 1.9rem;
+  transform: translateY(0.3rem);
+  height: 2rem;
+  margin-left: -2rem;
+}
+#facts, #facts > * {
+  max-height: 85vh;
+}
+</style>
+  </head>
+  <body class="w-full text-white bg-black px-3 pt-3">
+    <div class="block" id="facts">
+      <img
+        src="/sims.png"
+        alt=""
+        class="mx-auto rounded-3xl max-w-xl">
+    </div>
+    <div>
+    <div class="flex flex-col items-center justify-around">
+      <div class="text-lg max-w-xl flex flex-col content-center mt-12">
+        <div class="flex items-center justify-between">
+          <h1 class="font-bold text-4xl leading-tight mb-2 mr-2">
+            Türchen 6: Nikolaus
+          </h1>
+        </div>
+      </div>
+      <p class="max-w-xl">
+      Heute ist der 6. Dezember, das heißt, dass heute einen Tag lang ein Freund
+      vom Weihnachtsmann die Hauptrolle übernimmt. Der Nikolaus. Während der
+      Nikolaus sich für seinen großen Tag bereit macht, überlegt er sich, wem er
+      in diesem harten Jahr noch etwas Gutes tun kann. Er hat sich überlegt,
+      dass er den Leuten dieses Jahr das schönste Geschenk machen möchte und hat
+      bei jedem 6 Socken mit Überraschungen auf dem Kaminsims gelassen. Wenn am
+      nächsten Morgen alle aufwachen haben sie selbst die Möglichkeit anderen
+      eine Freude zu machen und Gutes zu tun, ganz egal ob, wie er selbst es
+      machte mit Geld oder durch andere kleine Dinge. Der Nikolaus möchte an
+      diesem Tag alle dazu inspirieren, anderen eine Freude zu machen und sie zu
+      unterstützen, egal wen oder wie.
+      </p>
+      <div class="flex flex-wrap w-screen max-w-6xl justify-around">
+        <% for (let i = 0; i < 6; ++i) { %>
+          <a href="<%= links[i] %>" >
+            <img src="/socke_<%=i + 1 %>.png" class="max-w-sm" target="_blank">
+          </a>
+        <% } %>
+      </div>
+      <div>
+        <p>
+          Kennt ihr selber eine Organisation, die Unterstützung gebrauchen kann?
+          Schickt sie uns auf
+          <a
+            href="https://instagram.com/klimaimadvent"
+            class="text-green-light"
+            >
+            Instagram
+          </a>
+          oder
+          <a
+            href="https://twitter.com/klimaimadvent"
+            class="text-green-light"
+            >
+            Twitter
+          </a>
+        </p>
+      </div>
+      <div class="mb-3">
+        <img src="/erde2.png" class="w-32">
+      </div>
+    </div>
+  </body>
+</html>
