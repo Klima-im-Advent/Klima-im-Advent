@@ -1,0 +1,146 @@
+<!doctype html>
+<html>
+  <head>
+    <title>
+      Türchen 7 – Klima im Advent
+    </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:site" content="@klimaimadvent"/>
+    <meta name="twitter:title" content = "Klima im Advent" />
+    <meta
+      name = "twitter:description"
+      content = "An diesem Donnerstag bedanken wir uns bei einer Organisation, die für klimagerechte und soziale Landwirtschaft kämpft"/>
+    <meta name = "twitter:image" content="/twitter_preview.jpg"/> 
+    <link rel="icon" href="/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="/favicon-57.png" sizes="57x57">
+    <link rel="icon" href="/favicon-76.png" sizes="76x76">
+    <link rel="icon" href="/favicon-96.png" sizes="96x96">
+    <link rel="icon" href="/favicon-128.png" sizes="128x128">
+    <link rel="icon" href="/favicon-192.png" sizes="192x192">
+    <link rel="icon" href="/favicon-228.png" sizes="228x228">
+    <link rel="shortcut icon" sizes="196x196" href="/favicon-196.png">
+    <link rel="apple-touch-icon" href="/favicon-120.png" sizes="120x120">
+    <link rel="apple-touch-icon" href="/favicon-152.png" sizes="152x152">
+    <link rel="apple-touch-icon" href="/favicon-180.png" sizes="180x180">
+    <meta name="msapplication-TileColor" content="#9a5c51">
+    <meta name="msapplication-TileImage" content="/favicon-144.png">
+    <meta name="msapplication-config" content="/browserconfig.xml" />  
+    <%- include("matomo") %>
+<style>
+@font-face {
+  font-family: "Elena";
+  src: url("/fonts/elena.ttf");
+}
+.elena-font {
+  font-family: Elena
+}
+#hoofs-left-1, #hoofs-left-2, #hoofs-right-1, #hoofs-right-2 {
+  transition: opacity 0.6s;
+}
+
+#hoofs-left-1 {
+  transform: translate3d(var(--hoof-l-1-x),var(--hoof-l-1-y),0);
+  opacity: var(--hoof-l-1-opacity, 1);
+}
+#hoofs-left-2 {
+  transform: translate3d(var(--hoof-l-2-x),var(--hoof-l-2-y),0);
+  opacity: var(--hoof-l-2-opacity, 1);
+}
+#hoofs-right-1 {
+  transform: translate3d(var(--hoof-r-1-x),var(--hoof-r-1-y),0);
+  opacity: var(--hoof-r-1-opacity, 1);
+}
+#hoofs-right-2 {
+  transform: translate3d(var(--hoof-r-2-x),var(--hoof-r-2-y),0);
+  opacity: var(--hoof-r-2-opacity, 1);
+}
+#game {
+  width: 100%;
+  height: 50vw;
+}
+ul > li::before {
+  content: '';
+  background-image: url(/weihnachtsmütze.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: inline-block;
+  width: 1.9rem;
+  transform: translateY(0.3rem);
+  height: 2rem;
+  margin-left: -2rem;
+}
+#facts, #facts > * {
+  max-height: 85vh;
+}
+</style>
+  </head>
+  <body class="w-full text-white bg-black px-3 pt-3">
+    <div class="flex items-center justify-around">
+      <div class="hidden lg:block">
+        <img src="/erde.png" class="w-32">
+      </div>
+      <div class="text-lg max-w-xl flex flex-col content-center mt-12 text-xl">
+        <div class="flex items-center justify-between">
+          <h1 class="font-bold text-4xl leading-tight mb-2 mr-2">
+            Türchen 7: Die Welt der Wichtel
+          </h1>
+          <img src="/mond.jpg" class="w-24">
+        </div>
+        <p>
+          In den letzten Tagen hatte der Weihnachtsmann schon viel erledigt und
+          fühlte sich auch schon relativ gut auf seinen großen Tag vorbereitet.
+          Doch irgendwie fehlte noch etwas – etwas, das ganz wichtig war, etwas,
+          ohne dass das Fest gar nicht funktioniert. Plötzlich fiel es ihm ein:
+          die Weihnachtswichtel! Anscheinend hatten sie ihren Termin verpasst,
+          zumindest standen sie bisher noch nicht vor seiner Tür, eifrig und
+          Bereit in der Geschenkewerkstatt loszulegen. Der Weihnachtsmann sprang
+          aus seinem gemütlichen Sessel auf, in dem er gerade noch gesessen
+          hatte um ein kleines Nickerchen zu halten. „Kommt mit!,“ rief er
+          seinen Elfen zu. „Wir müssen in den Wald!“. Sie stapften schon längere
+          Zeit durch den Wald. Ihre Stiefel hinterließen Spuren im Schnee und
+          sie mussten sich sehr bemühen nicht über einen der Äste zu stolpern,
+          die kreuz und quer über den Weg wuchsen. Der Schlitten war dank des
+          dichten Unterholzes nicht allzu praktisch und sie hatten ihn stehen
+          lassen müssen. „Sind wir bald da?“ quengelte ein kleiner Elf, der sich
+          vom Dino tragen ließ. „Mir ist kalt und langweilig“. „Sicher, keine
+          Sorge,“ sagte der Weihnachtsmann. „Da vorne müsste es sein“. 
+        </p>
+        <p>
+          Und tatsächlich: schon jetzt konnte man merken, dass der Schnee weniger wurde,
+          die Farben in die Baumkronen zurück kehrten und immer mehr Pilze aus dem Boden
+          sprossen. „Das ist es“, erklärte der Weihnachtsmann. „Hier ist die Welt der
+          Wichtel. Sie nehmen dass mit den Jahreszeiten nicht ganz so ernst, bei ihnen
+          scheint noch Herbst zu sein. Höchste Zeit, dass wir vorbei kommen und ihnen
+          Bescheid sagen.“ „Aber ich sehe gar nichts,“ maulte eine besonders kleine Elfe.
+          „Schau genau hin,“ sagte der Weihnachtsmann und schmunzelte und richtete seinen
+          Blick auf den Boden. 
+        </p>
+        <p>
+          Das wichtigste für einen kleinen Wichtel ist seine Mütze- ohne sie hat er keine
+          Zauberkräfte. Deshalb war es für den Weihnachtsmann auch sehr wichtig, dass
+          keine Mütze beim Aufbrechen vergessen wird. Helft ihm dabei, alle Mützen zu
+          finden!
+        </p>
+      </div>
+      <div class="hidden sm:block">
+        <img src="/erde2.png" class="w-32">
+      </div>
+    </div>
+    <img src="/suchbild.png" class="relative left-0 w-screen">
+    <p class="max-w-xl mx-auto mt-10 text-2xl">
+      Wieviele Mützen habt ihr gefunden? Schreibt uns auf
+      <a
+        href="https://instagram.com/klimaimadvent"
+        class="text-green-light"
+        >
+        Instagram
+      </a>
+      dort werden wir auch die Lösung posten :)
+    </p>
+  </body>
+</html>
