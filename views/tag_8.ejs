@@ -1,0 +1,152 @@
+<!doctype html>
+<html>
+  <head>
+    <title>
+      Türchen 8 – Klima im Advent
+    </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:site" content="@klimaimadvent"/>
+    <meta name="twitter:title" content = "Klima im Advent" />
+    <meta
+      name = "twitter:description"
+      content = "Robben – braucht es mehr?"/>
+    <meta name = "twitter:image" content="/twitter_preview.jpg"/> 
+    <link rel="icon" href="/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="/favicon-57.png" sizes="57x57">
+    <link rel="icon" href="/favicon-76.png" sizes="76x76">
+    <link rel="icon" href="/favicon-96.png" sizes="96x96">
+    <link rel="icon" href="/favicon-128.png" sizes="128x128">
+    <link rel="icon" href="/favicon-192.png" sizes="192x192">
+    <link rel="icon" href="/favicon-228.png" sizes="228x228">
+    <link rel="shortcut icon" sizes="196x196" href="/favicon-196.png">
+    <link rel="apple-touch-icon" href="/favicon-120.png" sizes="120x120">
+    <link rel="apple-touch-icon" href="/favicon-152.png" sizes="152x152">
+    <link rel="apple-touch-icon" href="/favicon-180.png" sizes="180x180">
+    <meta name="msapplication-TileColor" content="#9a5c51">
+    <meta name="msapplication-TileImage" content="/favicon-144.png">
+    <meta name="msapplication-config" content="/browserconfig.xml" />  
+    <%- include("matomo") %>
+<style>
+@font-face {
+  font-family: "Elena";
+  src: url("/fonts/elena.ttf");
+}
+.elena-font {
+  font-family: Elena
+}
+#hoofs-left-1, #hoofs-left-2, #hoofs-right-1, #hoofs-right-2 {
+  transition: opacity 0.6s;
+}
+
+#hoofs-left-1 {
+  transform: translate3d(var(--hoof-l-1-x),var(--hoof-l-1-y),0);
+  opacity: var(--hoof-l-1-opacity, 1);
+}
+#hoofs-left-2 {
+  transform: translate3d(var(--hoof-l-2-x),var(--hoof-l-2-y),0);
+  opacity: var(--hoof-l-2-opacity, 1);
+}
+#hoofs-right-1 {
+  transform: translate3d(var(--hoof-r-1-x),var(--hoof-r-1-y),0);
+  opacity: var(--hoof-r-1-opacity, 1);
+}
+#hoofs-right-2 {
+  transform: translate3d(var(--hoof-r-2-x),var(--hoof-r-2-y),0);
+  opacity: var(--hoof-r-2-opacity, 1);
+}
+#game {
+  width: 100%;
+  height: 50vw;
+}
+ul > li::before {
+  content: '';
+  background-image: url(/weihnachtsmütze.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: inline-block;
+  width: 1.9rem;
+  transform: translateY(0.3rem);
+  height: 2rem;
+  margin-left: -2rem;
+}
+#facts, #facts > * {
+  max-height: 85vh;
+}
+</style>
+  </head>
+  <body class="w-full text-white bg-black px-3 pt-3">
+    <div class="block" id="facts">
+      <img
+        src="/facts.jpg"
+        alt=""
+        class="mx-auto rounded-3xl border-2 max-h-full">
+    </div>
+    <div>
+    <div class="flex items-center justify-around">
+      <div class="hidden lg:block">
+        <img src="/erde.png" class="w-32">
+      </div>
+      <div class="text-lg max-w-xl flex flex-col content-center mt-12">
+        <div class="flex items-center justify-between">
+          <h1 class="font-bold text-4xl leading-tight mb-2 mr-2">
+            Türchen 8: Seehunde
+          </h1>
+          <img src="/mond.png" class="w-24">
+        </div>
+        <p>
+          Als der Weihnachtsmann an diesem wunderschönen Wintermorgen aufstand,
+          wusste er sofort, dass es ein toller Tag werden würde. Draußen
+          glitzerte frisch gefallener Schnee vor dem Fenster und die Rentiere
+          sprangen aufgeregt durcheinander. Auf der Eisbahn waren schon die
+          ersten Elfen unterwegs und eine weitere Gruppe hatte ausgelassen eine
+          Schneeballschlacht angefangen. In der Backstube waren ein paar der
+          Wichtel konzentriert dabei, süße Weihnachtskekse in bunte Kunstwerke
+          zu verwandeln und in einem unbeobachteten Moment nutzte der
+          Weihnachtsmann die Gelegenheit, sich ein paar der Plätzchen vom Blech
+          zu schnappen. Als er in den Briefkasten schaute gingen die guten
+          Nachrichten immer weiter: Er hat viele Briefe von Kindern bekommen,
+          die sich für eine gesunde und fröhlichere Welt einsetzten und war
+          beeindruckt, wie viel die Jüngsten auf der Welt in den letzten Jahren
+          vollbracht hatten. Auch beim Blick in die aktuelle Zeitung bekam er
+          noch mehr gute Laune. „Es ist doch nicht alles schlecht heutzutage“,
+          grummelte er lächelnd in seinen langen Rauschebart und schlug die
+          erste Seite auf.
+        </p>
+        <img src="/zeitung_seehund.png" alt="So viele Seehunde wie schon lange
+        nicht mehr: 41.700 wurden dieses Jahr im Wattenmeer geschätzt. Höchster
+        Bestand seit 45 Jahren">
+        <p>
+          Nachdem er das gelesen hatte breitete sich ein großes Lächeln auf
+          seinem Gesicht aus und er überlegte, ob er sich nächsten Jahr nicht
+          mal Seehunde statt Rentiere benutzten sollte.
+        </p>
+        <p>
+          Was ist euer Lieblings Klimafakt?
+          Schreibt ihn uns auf
+          <a
+            href="https://instagram.com/klimaimadvent"
+            class="text-green-light"
+            >
+            Instagram
+          </a>
+          oder
+          <a
+            href="https://twitter.com/klimaimadvent"
+            class="text-green-light"
+            >
+            Twitter
+          </a>
+          damit wir ihn auch teilen können
+        </p>
+      </div>
+      <div class="hidden sm:block">
+        <img src="/erde2.png" class="w-32">
+      </div>
+    </div>
+  </body>
+</html>

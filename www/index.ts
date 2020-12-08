@@ -1,3 +1,5 @@
+declare let currentDay: number;
+
 const body = document.getElementsByTagName('body')[0];
 const list = document.getElementsByTagName('ul')[0];
 
@@ -19,7 +21,7 @@ let currentSwiping: null | "slider" | "overview" = null;
 // TODO: ALLES KOMMENTIEREN!!!!
 // TODO: Nichts kommentieren, war hart zu schreiben, also sollte es auch hart zu
 // lesen sein
-let currentXTranslate = 6 * 0.9 * document.body.clientWidth;
+let currentXTranslate = (currentDay - 1) * 0.9 * document.body.clientWidth;
 list.style.transform = "translate3d(-" + currentXTranslate + "px,0,0)";
 const translateBy = (x: number, smooth: boolean) => {
   if (smooth) {
