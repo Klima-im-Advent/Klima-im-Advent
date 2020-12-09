@@ -1,0 +1,212 @@
+<!doctype html>
+<html>
+  <head>
+    <title>
+      Türchen 3 – Klima im Advent
+    </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:site" content="@klimaimadvent"/>
+    <meta name="twitter:title" content = "Klima im Advent" />
+    <meta
+      name = "twitter:description"
+      content = "An diesem Donnerstag bedanken wir uns bei einer Organisation, die für klimagerechte und soziale Landwirtschaft kämpft"/>
+    <meta name = "twitter:image" content="/twitter_preview.jpg"/> 
+    <link rel="icon" href="/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="/favicon-57.png" sizes="57x57">
+    <link rel="icon" href="/favicon-76.png" sizes="76x76">
+    <link rel="icon" href="/favicon-96.png" sizes="96x96">
+    <link rel="icon" href="/favicon-128.png" sizes="128x128">
+    <link rel="icon" href="/favicon-192.png" sizes="192x192">
+    <link rel="icon" href="/favicon-228.png" sizes="228x228">
+    <link rel="shortcut icon" sizes="196x196" href="/favicon-196.png">
+    <link rel="apple-touch-icon" href="/favicon-120.png" sizes="120x120">
+    <link rel="apple-touch-icon" href="/favicon-152.png" sizes="152x152">
+    <link rel="apple-touch-icon" href="/favicon-180.png" sizes="180x180">
+    <meta name="msapplication-TileColor" content="#9a5c51">
+    <meta name="msapplication-TileImage" content="/favicon-144.png">
+    <meta name="msapplication-config" content="/browserconfig.xml" />  
+    <%- include("matomo") %>
+<style>
+@font-face {
+  font-family: "Elena";
+  src: url("/fonts/elena.ttf");
+}
+.elena-font {
+  font-family: Elena
+}
+#hoofs-left-1, #hoofs-left-2, #hoofs-right-1, #hoofs-right-2 {
+  transition: opacity 0.6s;
+}
+
+#hoofs-left-1 {
+  transform: translate3d(var(--hoof-l-1-x),var(--hoof-l-1-y),0);
+  opacity: var(--hoof-l-1-opacity, 1);
+}
+#hoofs-left-2 {
+  transform: translate3d(var(--hoof-l-2-x),var(--hoof-l-2-y),0);
+  opacity: var(--hoof-l-2-opacity, 1);
+}
+#hoofs-right-1 {
+  transform: translate3d(var(--hoof-r-1-x),var(--hoof-r-1-y),0);
+  opacity: var(--hoof-r-1-opacity, 1);
+}
+#hoofs-right-2 {
+  transform: translate3d(var(--hoof-r-2-x),var(--hoof-r-2-y),0);
+  opacity: var(--hoof-r-2-opacity, 1);
+}
+#game {
+  width: 100%;
+  height: 50vw;
+}
+ul > li::before {
+  content: '';
+  background-image: url(/weihnachtsmütze.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: inline-block;
+  width: 1.9rem;
+  transform: translateY(0.3rem);
+  height: 2rem;
+  margin-left: -2rem;
+}
+body {
+  background-color: #E9C3BE;
+  color: #762612;
+}
+</style>
+  </head>
+  <body class="w-full px-3 pt-3">
+    <div class="text-lg max-w-xl mx-auto flex flex-col content-center mt-5">
+      <div class="flex items-center justify-between">
+        <h1 class="font-bold text-4xl leading-tight mb-2 mr-2">
+          Türchen 9: Santacare
+        </h1>
+      </div>
+      <p class="text-black">
+„Heute ist ja schon der 9. Dezember“, stellte der Weihnachtsmann an diesem
+Morgen erschöpft fest. Er hatte gestern den gesamten Tag in vollen Zügen
+genossen, doch jetzt kam auch allmählich wieder der Weihnachtsstress auf. Er
+erinnerte sich an den riesigen Haufen Wunschzettel, der in der Werkstatt auf ihn
+wartete und bearbeitet werden musste und dazu stand heute auch noch ein Testflug
+an. Seufzend ließ er sich in seinen Sessel fallen. Da kam die älteste Elfe
+Sophia mit einer Tasse heiß dampfenden Tees und einem Teller
+Weihnachtsplätzchen, sie schien bemerkt zu haben, dass der Weihnachtsmann sehr
+erschöpft war. Damit er die Weihnachtszeit gut überstehen konnte, schrieb Sophia
+ihm, bevor sie ging noch einen Zettel mit tollen Tipps, die dem Weihnachtsmann
+sicherlich durch die stressigen Wochen helfen würden:
+      </p>
+      <div class="flex items-center justify-center">
+        <div class="w-12 mb-3 hidden sm:block">
+          <img src="/sparks_left.png">
+        </div>
+        <h2 class="elena-font text-center text-5xl">
+          Selfcare im Advent
+        </h2>
+        <div class="w-12 mb-3 hidden sm:block">
+          <img src="/sparks_right.png">
+        </div>
+      </div>
+      <div class="flex items-center">
+        <div>
+          <h3 class="elena-font text-2xl">
+            Rausgehen und Winterspazieren
+          </h3>
+          <p class="text-black">
+            Gerade im Lockdown ist es häufig so, dass man vergisst, of genug an die
+            frische Luft zu kommen. Das ist zum einen nicht gesund- und zum anderen
+            verpasst man sehr viel. Den ersten Schnee zum Beispiel, oder die ganzen
+            Farben die im Winter überall entstehen
+          </p>
+        </div>
+        <div class="w-24 flex-shrink-0 lg:w-56 ml-3">
+          <img src="/schuhe_sparks.png">
+        </div>
+      </div>
+      <div class="flex items-center">
+        <div class="w-20 flex-shrink-0 mr-5">
+          <img src="/phone_sparks.png">
+        </div>
+        <div>
+          <h3 class="elena-font text-2xl">
+            Digitale Auszeiten
+          </h3>
+          <p class="text-black">
+            Gerade in der Weihnachtszeit ist es wichtig, sich Pausen vom Stress auf
+            der Welt zu nehmen. Gerade am Handy tendiert man leicht dazu, viel zu
+            viele negative Nachrichten aufzunehmen und sich sehr nahe gehen zu
+            lassen. Oft tut es gut die Zeit, in der man sich mit Politik beschäftigt
+            einzugrenzen und wenn man Zeit mit den Menschen um sich herum verbringt
+            auch einmal das Smartphone komplett wegzulegen.
+          </p>
+        </div>
+      </div>
+      <h3 class="elena-font text-2xl">
+        Nicht zu hart zu sich selbst sein
+      </h3>
+      <p class="text-black">
+        Nicht alles muss gut laufen. Es ist vollkommen okay jetzt nicht super
+        produktiv zu sein. Es ist sogar wichtig sich jetzt am Ende des
+        turbulenten, belastenden letzten Jahres sehr wichtig darauf zu
+        konzentrieren was einem selbst gut tut. Allerdings ist auch das keine
+        Aufgabe, mit der man sich stressen sollte.
+      </p>
+      <div class="flex items-center">
+        <div class="w-32 flex-shrink-0 mr-5">
+          <img src="/kekse_sparks.png">
+        </div>
+        <div>
+          <h3 class="elena-font text-2xl">
+            Kekse
+          </h3>
+          <p class="text-black">
+            Weil Kekse wirklich einfach sehr gut sind und zu einer guten
+            Weihnachtszeit gehören. Es ist auch vollkommen okay jetzt ein paar mehr
+            zu essen als sonst
+          </p>
+        </div>
+      </div>
+      <h3 class="elena-font text-2xl">
+        Rechtzeitig an Geschenke denken
+      </h3>
+      <div class="flex items-center">
+        <p class="text-black">
+          Unnötiger Stress lässt sich leicht dadurch vermeiden, dass man sich
+          seine Zeit gut einteilt und rechtzeitig an Weihnachtsgeschenke denkt und
+          nicht zu spät anfängt zu überlegen wem man was schenkt und wann man es
+          gut kaufen kann.
+        </p>
+        <div class="w-24 md:w-32 lg:w-48 flex-shrink-0">
+          <img src="/geschenke_sparks.png">
+        </div>
+      </div>
+    </div>
+    <div class="max-w-xl text-black mx-auto text-lg">
+      <p>
+        Schreibt uns gerne wie unsere Tipps funktionieren oder was ihr für
+        Antistresstipps habt auf
+      <a
+        href="https://instagram.com/klimaimadvent"
+        class="text-green-light"
+        >
+        Instagram
+      </a>
+      oder
+      <a
+        href="https://twitter.com/klimaimadvent"
+        class="text-green-light"
+        >
+        Twitter
+      </a>
+      und entspannt euch mit 
+      <a href="/tag/2" class="text-green-light">
+        Lous Weihnachtlichem Kakao
+      </a>
+      </p>
+    </div>
+  </body>
+</html>
