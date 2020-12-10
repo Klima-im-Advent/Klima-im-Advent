@@ -1,0 +1,198 @@
+<!doctype html>
+<html>
+  <head>
+    <title>
+      Türchen 8 – Klima im Advent
+    </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:site" content="@klimaimadvent"/>
+    <meta name="twitter:title" content = "Klima im Advent" />
+    <meta
+      name = "twitter:description"
+      content = "Robben – braucht es mehr?"/>
+    <meta name = "twitter:image" content="/twitter_preview.jpg"/> 
+    <link rel="icon" href="/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="/favicon-57.png" sizes="57x57">
+    <link rel="icon" href="/favicon-76.png" sizes="76x76">
+    <link rel="icon" href="/favicon-96.png" sizes="96x96">
+    <link rel="icon" href="/favicon-128.png" sizes="128x128">
+    <link rel="icon" href="/favicon-192.png" sizes="192x192">
+    <link rel="icon" href="/favicon-228.png" sizes="228x228">
+    <link rel="shortcut icon" sizes="196x196" href="/favicon-196.png">
+    <link rel="apple-touch-icon" href="/favicon-120.png" sizes="120x120">
+    <link rel="apple-touch-icon" href="/favicon-152.png" sizes="152x152">
+    <link rel="apple-touch-icon" href="/favicon-180.png" sizes="180x180">
+    <meta name="msapplication-TileColor" content="#9a5c51">
+    <meta name="msapplication-TileImage" content="/favicon-144.png">
+    <meta name="msapplication-config" content="/browserconfig.xml" />  
+    <%- include("matomo") %>
+<style>
+@font-face {
+  font-family: "Elena";
+  src: url("/fonts/elena.ttf");
+}
+@font-face {
+  font-family: 'Redressed';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/fonts/Redressed-Regular.ttf);
+}
+.redressed-font {
+  font-family: Redressed;
+}
+.elena-font {
+  font-family: Elena
+}
+#hoofs-left-1, #hoofs-left-2, #hoofs-right-1, #hoofs-right-2 {
+  transition: opacity 0.6s;
+}
+
+#hoofs-left-1 {
+  transform: translate3d(var(--hoof-l-1-x),var(--hoof-l-1-y),0);
+  opacity: var(--hoof-l-1-opacity, 1);
+}
+#hoofs-left-2 {
+  transform: translate3d(var(--hoof-l-2-x),var(--hoof-l-2-y),0);
+  opacity: var(--hoof-l-2-opacity, 1);
+}
+#hoofs-right-1 {
+  transform: translate3d(var(--hoof-r-1-x),var(--hoof-r-1-y),0);
+  opacity: var(--hoof-r-1-opacity, 1);
+}
+#hoofs-right-2 {
+  transform: translate3d(var(--hoof-r-2-x),var(--hoof-r-2-y),0);
+  opacity: var(--hoof-r-2-opacity, 1);
+}
+#game {
+  width: 100%;
+  height: 50vw;
+}
+ul > li::before {
+  content: '';
+  background-image: url(/weihnachtsmütze.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: inline-block;
+  width: 1.9rem;
+  transform: translateY(0.3rem);
+  height: 2rem;
+  margin-left: -2rem;
+}
+#facts, #facts > * {
+  max-height: 85vh;
+}
+#schnee {
+  transform: translateY(-66%)
+}
+.step-2,.step-3,.step-4,.step-5 {
+  display: none;
+}
+
+.start-screen,.question-screen {
+  display: none;
+}
+.end-screen {
+  display: block;
+}
+</style>
+  </head>
+  <body class="w-full text-red-dark redressed-font">
+    <div
+      class="flex flex-col h-screen justify-between p-1 items-center max-w-xl
+      mx-auto pb-3">
+      <div class="flex justify-center content-center items-center mt-2">
+        <div class="bg-red-dark w-32 rounded-md relative">
+          <div
+            class="absolute w-full top-0 left-0"
+            id="schnee">
+            <img src="/schnee.svg">
+          </div>
+          <img src="/pfote.png">
+        </div>
+        <h2 class="ml-3 redressed-font text-3xl start-screen end-screen">
+          Welches Aktivistier bist du?
+        </h2>
+        <h3
+          class="bg-red-dark text-white text-3xl p-2 rounded-lg ml-3
+            leading-none question-screen"
+          id="question">
+          Im Danni werden Baumhäuser gebaut…
+        </h3>
+      </div>
+      <div class="">
+        <button
+          class=
+          "inline-block text-white bg-red-dark rounded-full redressed-font text-6xl
+          px-16 relative start-screen">
+          Start
+        </button>
+      </div>
+      <div class="flex flex-wrap text-white justify-around py-3 question-screen">
+        <div class="flex h-2/4 mb-1">
+          <button
+            class="bg-red-dark w-6/12 mr-1 rounded-md p-2 leading-tight"
+            id="answer-0"
+            >
+            Ich bringe Holz und Material vorbei.
+          </button>
+          <button
+            class="bg-red-dark w-6/12 ml-1 rounded-md p-2 leading-tight mb-0"
+            id="answer-1"
+            >
+            Ich schnappe mir meinen Rucksack und ziehe ins Barrio.
+            Meine neue Adresse: Dannenröder Forst 
+          </button>
+        </div>
+        <div class="flex h-2/4 mt-1">
+          <button
+            class="w-6/12 bg-red-dark mr-1 rounded-md p-2 leading-tight mb-0"
+            id="answer-2"
+            >
+            Ich schau mal, ob es bei mir eine Kundgebung gibt. Wenn nicht male
+            ich ein hübsches Schild und poste was auf Insta.
+          </button>
+          <button
+            class="w-6/12 bg-red-dark ml-1 rounded-md p-2 leading-tight mb-0"
+            id="answer-3"
+            >
+            Ich trommle meine OG zusammen und wir machen eine Soli-Demo
+          </button>
+        </div>
+      </div>
+      <div class="max-w-full flex-none question-screen">
+        <img src="/step_1.png" id="step-1">
+        <img src="/step_2.png" id="step-2" class="hidden">
+        <img src="/step_3.png" id="step-3" class="hidden">
+        <img src="/step_4.png" id="step-4" class="hidden">
+        <img src="/step_5.png" id="step-5" class="hidden">
+      </div>
+      <div class="bg-red-dark text-white text-5xl rounded-xl px-5 mt-3 hidden end-screen">
+        Du bist…
+      </div>
+      <div class="end-screen">
+        <img src="/bieber.png" class="my-3">
+      </div>
+      <div class="flex flex-col items-center end-screen">
+        <h2 class="text-4xl">
+          Der Bieber
+        </h2>
+        <p class="font-sans bg-red-dark text-white p-2 rounded-xl mb-1">
+          Am liebsten trägt dieses Aktivistier eine alte Latzhose – die hat vieeele
+          Taschen. Wenn während der Demo etwas runterfällt, was nicht runterfallen
+          sollte, ist der Bieber sofort zur Stelle und fischt aus einer seiner
+          Taschen eine Rolle Panzerband. Sonst ist er eher im Hintergrund, regelt am
+          Mischpult, baut Technik auf und ab – und niemand hat so einen guten
+          Überblick über das Lager wie er… eigentlich hat niemand sonst überhaupt
+          einen Überblick über das Lager.
+        </p>
+      </div>
+    </div>
+    <script src="/js/quiz.js"></script>
+  </body>
+</html>
