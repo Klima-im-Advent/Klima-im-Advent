@@ -1,0 +1,222 @@
+<!doctype html>
+<html>
+  <head>
+    <title>
+      Türchen 11 – Klima im Advent
+    </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:site" content="@klimaimadvent"/>
+    <meta name="twitter:title" content = "Klima im Advent" />
+    <meta
+      name = "twitter:description"
+      content = "Mach dir einen gemütlichen Weihnachtstag mit unserem Kakaorezept am
+      2. Tag unseres Klimaadventskalendar"/>
+    <meta name = "twitter:image" content="/twitter_preview.jpg"/> 
+    <link rel="icon" href="/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="/favicon-57.png" sizes="57x57">
+    <link rel="icon" href="/favicon-76.png" sizes="76x76">
+    <link rel="icon" href="/favicon-96.png" sizes="96x96">
+    <link rel="icon" href="/favicon-128.png" sizes="128x128">
+    <link rel="icon" href="/favicon-192.png" sizes="192x192">
+    <link rel="icon" href="/favicon-228.png" sizes="228x228">
+    <link rel="shortcut icon" sizes="196x196" href="/favicon-196.png">
+    <link rel="apple-touch-icon" href="/favicon-120.png" sizes="120x120">
+    <link rel="apple-touch-icon" href="/favicon-152.png" sizes="152x152">
+    <link rel="apple-touch-icon" href="/favicon-180.png" sizes="180x180">
+    <meta name="msapplication-TileColor" content="#9a5c51">
+    <meta name="msapplication-TileImage" content="/favicon-144.png">
+    <meta name="msapplication-config" content="/browserconfig.xml" />  
+    <%- include("matomo") %>
+<style>
+@font-face {
+  font-family: "Elena";
+  src: url("/fonts/elena.ttf");
+}
+.elena-font {
+  font-family: Elena
+}
+#hoofs-left-1, #hoofs-left-2, #hoofs-right-1, #hoofs-right-2 {
+  transition: opacity 0.6s;
+}
+
+#hoofs-left-1 {
+  transform: translate3d(var(--hoof-l-1-x),var(--hoof-l-1-y),0);
+  opacity: var(--hoof-l-1-opacity, 1);
+}
+#hoofs-left-2 {
+  transform: translate3d(var(--hoof-l-2-x),var(--hoof-l-2-y),0);
+  opacity: var(--hoof-l-2-opacity, 1);
+}
+#hoofs-right-1 {
+  transform: translate3d(var(--hoof-r-1-x),var(--hoof-r-1-y),0);
+  opacity: var(--hoof-r-1-opacity, 1);
+}
+#hoofs-right-2 {
+  transform: translate3d(var(--hoof-r-2-x),var(--hoof-r-2-y),0);
+  opacity: var(--hoof-r-2-opacity, 1);
+}
+#game {
+  width: 100%;
+  height: 50vw;
+}
+ul > li::before {
+  content: '';
+  background-image: url(/weihnachtsmütze.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: inline-block;
+  width: 1.9rem;
+  transform: translateY(0.3rem);
+  height: 2rem;
+  margin-left: -2rem;
+}
+</style>
+  </head>
+  <body class="w-full bg-black text-white px-3">
+    <div class="block max-h-screen">
+      <img src="/haus_punsch.png" alt="" class="max-h-screen mx-auto">
+    </div>
+    <div class="flex justify-around items-center max-w-xl mx-auto">
+      <div class="text-lg flex">
+        <h1 class="text-4xl font-semibold max-w-xl">
+          Türchen 11: Der Wunschpunsch
+        </h1>
+      </div>
+    </div>
+    <p class="max-w-xl mx-auto">
+    Nach einem schönen Fest am gestrigen Tag möchte der Weihnachtsmann den Elfen
+    und Wichteln etwas Gutes tun. Er hat ein tolles Punschrezept von einer
+    befreundeten Elfe bekommen und verbringt den ganzen Tag damit literweise
+    Punsch für seine zahlreichen Freund:innen herzustellen. Wie er feststellen
+    musste hatte er jedoch ein paar Äpfel zu wenig besorgt und musste
+    improvisieren, also schaute er in seiner Vorratskammer und fand einen
+    riesigen Sack voller Orangen. Schnell passte er das Rezept auch auf diese an
+    und endlich war genug Wunschpunsch für alle da. Um das ganze ein wenig
+    interessanter zu machen überlegte der Weihnachtsmann sich, die Elfen und
+    Wichtel für ihren Lieblingspunsch abstimmen zu lassen.
+    </p>
+    <h2 class="text-2xl text-center mb-3">
+      Was magst du lieber?
+    </h2>
+    <div class="max-w-xl flex mx-auto justify-around">
+      <button class="w-40 mr-1 bg-red-dark p-2 rounded-t-lg" id="orange">
+        <img src="/orange.png">
+      </button>
+      <button class="w-40 ml-1 bg-green-light p-2 rounded-t-lg" id="apple">
+        <img src="/apfel.png">
+      </button>
+    </div>
+    <div class="flex w-full items-center justify-around py-12 bg-red-dark switch
+      rounded-t-lg">
+      <div class="hidden sm:block w-12">
+        <img src="/kreide_schneeflocke.png">
+      </div>
+      <div class="w-48">
+        <img src="/kreide_yummy.png">
+      </div>
+      <div class="hidden sm:block w-12">
+        <img src="/kreide_schneeflocke2.png">
+      </div>
+    </div>
+    <header class="flex justify-around items-center elena-font bg-red-dark
+      switch">
+      <div class="w-32 hidden sm:block">
+        <img src="/zimt_stange.png">
+      </div>
+      <div class="max-w-sm px-8">
+        <h1 class="text-3xl text-pink">
+          Zutaten (für 5 Tassen)
+        </h1>
+        <ul class="pl-2 text-lg">
+          <li class="apple"> 0.5&nbsp;l Traubensaft</li>
+          <li class="apple"> 0.5&nbsp;l Früchtetee</li>
+          <li class="apple">
+            1 Päckchen Vanillezucker (oder ein bis zwei Esslöffel normaler Zucker)
+          </li>
+          <li class="apple"> 1 Stange Zimt (alternativ: 1/2 TL Zimtpulver)</li>
+          <li class="apple"> Nelken </li>
+          <li class="hidden orange"> 1 Bio Orange </li>
+          <li class="hidden orange"> 1 Stück Ingwer </li>
+          <li class="hidden orange"> 1.5 l Apfelsaft </li> 
+          <li class="hidden orange"> 1 Zimtstange </li>
+          <li class="hidden orange"> 1 Sternanis </li>
+          <li class="hidden orange"> 2 Nelken </li>
+        </ul>
+      </div>
+      <div class="w-32">
+        <img src="/kaffee.png">
+      </div>
+    </header>
+    <main class="flex justify-around items-center elena-font bg-red-dark switch">
+      <div class="w-32 hidden lg:block">
+        <img src="/kreide_kranz.png">
+      </div>
+      <div>
+        <h1 class="text-center text-5xl text-pink" id="zubereitung">
+          <img src="/arrow_right.png" alt="" class="w-10 hidden sm:inline">
+          Zubereitung
+          <img src="/arrow_left.png" alt="" class="w-12 hidden sm:inline">
+        </h1>
+        <p class="max-w-xl mx-auto orange">
+Den Früchtetee nach Packungsanleitung kochen und ziehen lassen. In der
+Zwischenzeit alle anderen Zutaten in einen Topf geben und erhitzen. Den Tee
+hinzugeben und warten, bis die Temperatur angenehm ist (nicht zu heiß, aber
+auch nicht zu kalt). Den Punsch abschmecken und je nach dem noch etwas süßen
+oder würzen. Wenn ihr eine Zimtstange verwendet habt könnt ihr sie nun zusammen
+mit den Nelken rausfischen. In Tassen füllen und warm genießen.  
+        </p>
+
+        <p class="apple hidden max-w-xl mx-auto">
+Orange heiß waschen, abtrocknen und die Schale abreiben, dann halbieren und Saft
+auspressen. Ingwer schälen und in Scheiben schneiden. Apfel- und Orangensaft
+aufkochen. Die Orangenschale und die Gewürze zugeben und 30-45 Minuten ziehen
+lassen.
+        </p>
+        <p class="apple hidden max-w-xl mx-auto">
+Du brauchst ein Sieb.
+        </p>
+        <p class="apple hidden max-w-xl mx-auto">
+Apfelpunsch über einem Sieb abgießen, erwärmen und heiß servieren.
+        </p>
+        <p class="max-w-xl mx-auto">
+Die Klima im Advent- Redaktion empfiehlt den Punsch in eine Thermoskanne zu
+füllen und mit zum nächsten Klimastreik zu nehmen— dort entfaltet sich das
+Aroma noch einmal besser.
+        </p> 
+        <p class="text-green-light">
+        Schickt uns gerne eure Punschbilder auf Instagram: <a
+          href="https://instagram.com/klimaimadvent" class="text-white">
+          @KlimaImAdvent</a>
+        </p>
+      </div>
+      <div class="hidden lg:block">
+        <img src="/kreide_kugel.png" class="w-32">
+      </div>
+    </main>
+    <div class="flex w-full items-center justify-around py-12 bg-red-dark switch
+      rounded-b-lg mb-2">
+      <div class="hidden xl:block w-10">
+        <img src="/kreide_candle.png">
+      </div>
+      <div class="hidden sm:block w-16">
+        <img src="/kreide_gift.png">
+      </div>
+      <div class="w-20">
+        <img src="/kreide_heart.png">
+      </div>
+      <div class="hidden sm:block w-32">
+        <img src="/kreide_bon_appetit.png">
+      </div>
+      <div class="hidden xl:block w-10">
+        <img src="/kreide_candle2.png">
+      </div>
+    </div> 
+    <script src="/js/tag_11.js">
+    </script>
+  </body>
+</html>
