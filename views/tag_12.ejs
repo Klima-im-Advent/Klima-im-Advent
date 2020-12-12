@@ -1,0 +1,185 @@
+<!doctype html>
+<html>
+  <head>
+    <title>
+      Türchen 12 – Klima im Advent
+    </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:site" content="@klimaimadvent"/>
+    <meta name="twitter:title" content = "Klima im Advent" />
+    <meta
+      name = "twitter:description"
+      content = "An diesem Donnerstag bedanken wir uns bei einer Organisation, die für klimagerechte und soziale Landwirtschaft kämpft"/>
+    <meta name = "twitter:image" content="/twitter_preview.jpg"/> 
+    <link rel="icon" href="/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="/favicon-57.png" sizes="57x57">
+    <link rel="icon" href="/favicon-76.png" sizes="76x76">
+    <link rel="icon" href="/favicon-96.png" sizes="96x96">
+    <link rel="icon" href="/favicon-128.png" sizes="128x128">
+    <link rel="icon" href="/favicon-192.png" sizes="192x192">
+    <link rel="icon" href="/favicon-228.png" sizes="228x228">
+    <link rel="shortcut icon" sizes="196x196" href="/favicon-196.png">
+    <link rel="apple-touch-icon" href="/favicon-120.png" sizes="120x120">
+    <link rel="apple-touch-icon" href="/favicon-152.png" sizes="152x152">
+    <link rel="apple-touch-icon" href="/favicon-180.png" sizes="180x180">
+    <meta name="msapplication-TileColor" content="#9a5c51">
+    <meta name="msapplication-TileImage" content="/favicon-144.png">
+    <meta name="msapplication-config" content="/browserconfig.xml" />  
+    <%- include("matomo") %>
+<style>
+@font-face {
+  font-family: "Elena";
+  src: url("/fonts/elena.ttf");
+}
+.elena-font {
+  font-family: Elena
+}
+#hoofs-left-1, #hoofs-left-2, #hoofs-right-1, #hoofs-right-2 {
+  transition: opacity 0.6s;
+}
+
+#hoofs-left-1 {
+  transform: translate3d(var(--hoof-l-1-x),var(--hoof-l-1-y),0);
+  opacity: var(--hoof-l-1-opacity, 1);
+}
+#hoofs-left-2 {
+  transform: translate3d(var(--hoof-l-2-x),var(--hoof-l-2-y),0);
+  opacity: var(--hoof-l-2-opacity, 1);
+}
+#hoofs-right-1 {
+  transform: translate3d(var(--hoof-r-1-x),var(--hoof-r-1-y),0);
+  opacity: var(--hoof-r-1-opacity, 1);
+}
+#hoofs-right-2 {
+  transform: translate3d(var(--hoof-r-2-x),var(--hoof-r-2-y),0);
+  opacity: var(--hoof-r-2-opacity, 1);
+}
+#game {
+  width: 100%;
+  height: 50vw;
+}
+ul > li::before {
+  content: '';
+  background-image: url(/weihnachtsmütze.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: inline-block;
+  width: 1.9rem;
+  transform: translateY(0.3rem);
+  height: 2rem;
+  margin-left: -2rem;
+}
+#facts, #facts > * {
+  max-height: 85vh;
+}
+body {
+  background: #eea9ba;
+}
+</style>
+  </head>
+  <body class="w-full px-3 pt-3">
+    <div class="flex items-center justify-around">
+      <div class="hidden lg:block">
+        <img src="/empathie_streuer.png" class="w-32">
+      </div>
+      <div class="text-lg max-w-xl flex flex-col content-center mt-12">
+        <div class="flex items-center justify-between">
+          <h1 class="font-bold text-4xl leading-tight mb-2 mr-2">
+            Türchen 12: Toxic!
+          </h1>
+        </div>
+        <p>
+          Als der Weihnachtsmann heute in die Backstube kam, bemerkte er einen
+          Streit zwischen zwei Elfen. Die eine (augenscheinlich eine männliche
+          Elfe) schien nicht mitbacken zu wollen, weil das ja „Nichts für echte
+          Männer“ sei. Er bemerkte scheinbar nicht, dass Backen Spaß machte und
+          man sogar heimlich Plätzchen stibitzen konnte, ganz egal zu welchem
+          Geschlecht man sich zählte. Am Abend, nachdem alle den Punsch ihrer
+          Wahl bekommen hatten, machte es sich der Weihnachtsmann in seinem
+          großen Ohrensessel gemütlich, schlürfte sein Getränk (eine Mischung
+          aus Apfel- und Orangenpunsch), schloss die Augen und erinnerte sich
+          zurück an den März. Und so fing er an zu erzählen, was
+          Geschlechterrollen in einer Gesellschaft auslösen konnten und wie
+          davon sogar Menschen in Umfeldern betroffen waren, die sich selbst als
+          fortschrittlich und aufgeklärt bezeichneten. Nachdem er so allen die
+          systematische Benachteiligung von <a
+            href="https://queer-lexikon.net/2020/05/30/finta/"
+            class="text-green-dark">FINTA*</a> Menschen verständlich gemacht
+          hatte, begann er den zuhörenden Elfen die toxische Männlichkeit zu
+          erklären.
+        </p>
+        <p>
+          <h2 class="elena-font text-2xl">Zutaten (reicht für alle Cis-Männer mit Nachholbedarf)</h2>
+          <ul class="pl-8">
+            <li>
+              500&nbsp;g Rededominanz abgeben
+            </li>
+            <li>
+              1&nbsp;kg Gefühle zulassen und kommunizieren
+            </li>
+            <li>
+              5&nbsp;EL Betroffenen von Sexismus wirklich zuhören
+            </li>
+            <li>
+              1&nbsp;Msp die eigene privilegierte Stellung in einem sozialen
+              Gefüge anerkennen
+            </li>
+            <li>
+              1250&nbsp;ml Geschlechterrollendenken – ablegen – und – das – tun,
+              – tragen, – und – mögen – was – man – wirklich will
+            </li>
+            <li>
+              4&nbsp;TL feministische Weiterbildung
+            </li>
+            <li>
+              1&nbsp;Päckchen im Umgang mit anderen auf Kooperation und Empathie
+              setzen statt alles als einen Wettbewerb zu sehen in dem der
+              Dominanteste gewinnt
+            </li>
+            <li>
+              1&nbsp;Prise Zimt
+            </li>
+          </ul>
+        </p>
+        <h2 class="elena-font text-2xl">
+          Zubereitung
+        </h2>
+        <p>
+          Alle Zutaten gut verinnerlichen und ernstnehmen und dann
+          zusammengeben. Die Reihenfolge ist dabei nebensächlich, wichtig ist
+          nur, dass nichts vergessen wird. Vorsichtig durchmischen, bis eine
+          gute Konsistenz entsteht. Die Masse kurz ruhen lassen und dabei
+          verinnerlichen, dass nicht jede Maskulinität toxisch ist und es nicht
+          um das Mann-sein an sich geht. Wenn alles gut aufgegangen ist (die
+          Zeit, die es braucht kann sehr unterschiedlich sein) vorsichtig eine
+          Form nehmen, in den Ofen schieben und bei einer absolut zu
+          vernachlässigenden Temperatur backen. Die Backzeit ist dann perfekt,
+          wenn sich die Zimtnote gut entfaltet. Die winterlich bekämpfte toische
+          Maskulinität aus dem Ofen nehmen. Alles abkühlen lassen – dann ist sie
+          servierbereit.
+        </p>
+        <p>
+          Wir empfehlen, das Rezept unbedingt an alle Cis-Männer im eigenen
+          Umfeld weiterzugeben – praktischerweise reicht es absolut immer aus
+          und bis auf den Zimt sind weder Geld noch komplizierte Einkäufe
+          notwendig. Probiert es aus – es wirkt!
+        </p>
+      </div>
+      <div class="hidden sm:block">
+        <img src="/crying_boys.png" class="w-32">
+      </div>
+    </div>
+    <p class="max-w-xl mx-auto text-lg">
+      Wenn du das hier als Cis-Mann liest (wenn du nicht weißt was Cis heißt
+      bist du es): Versuch die Weihnachtszeit als Zeit der Rücksichtnahme und
+      Empathie zu sehen. Wende das Rezept an und frag dich vor deinem nächsten
+      Redebeitrag, ob das wirklich gesagt werden muss. Bilde dich weiter und
+      nimm Opfer von Sexismus Ernst ohne ihre Probleme zu relativieren.
+    </p>
+  </body>
+</html>
