@@ -102,8 +102,9 @@
       <div class="bg-white w-full flex-col hidden lg:flex">
         <div class="max-w-xl mx-auto pt-5">
           <p class="mb-5">
-            Mit einem warmen Punsch in der Hand erinnert der Weihnachtsmann sich
-            an vergangene Ereignisse zurück und was sich seitdem verändert hat…
+            Heute hat der Weihnachtsmann eine Videokonferenz – um diese ein
+            bisschen spannender zu gestalten hat er sich etwas ganz besonderes
+            überlegt
           </p>
         </div>
         <a
@@ -168,7 +169,7 @@ Telegram in unseren Channel, um immer up to date zu sein!
         <% for (let j = 0; j < 6; ++j) {%>
         <a
           class="w-2/12"
-          <% if (i * 6 + j + i < currentDay + 1) { %>
+          <% if (i * 6 + j + 1 < currentDay + 1) { %>
           href="/tag/<%=i * 6 + j + 1%>"
           <% } %>
           >

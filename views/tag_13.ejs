@@ -1,0 +1,130 @@
+<!doctype html>
+<html>
+  <head>
+    <title>
+      Türchen 12 – Klima im Advent
+    </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:site" content="@klimaimadvent"/>
+    <meta name="twitter:title" content = "Klima im Advent" />
+    <meta
+      name = "twitter:description"
+      content = "An diesem Donnerstag bedanken wir uns bei einer Organisation, die für klimagerechte und soziale Landwirtschaft kämpft"/>
+    <meta name = "twitter:image" content="/twitter_preview.jpg"/> 
+    <link rel="icon" href="/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="/favicon-57.png" sizes="57x57">
+    <link rel="icon" href="/favicon-76.png" sizes="76x76">
+    <link rel="icon" href="/favicon-96.png" sizes="96x96">
+    <link rel="icon" href="/favicon-128.png" sizes="128x128">
+    <link rel="icon" href="/favicon-192.png" sizes="192x192">
+    <link rel="icon" href="/favicon-228.png" sizes="228x228">
+    <link rel="shortcut icon" sizes="196x196" href="/favicon-196.png">
+    <link rel="apple-touch-icon" href="/favicon-120.png" sizes="120x120">
+    <link rel="apple-touch-icon" href="/favicon-152.png" sizes="152x152">
+    <link rel="apple-touch-icon" href="/favicon-180.png" sizes="180x180">
+    <meta name="msapplication-TileColor" content="#9a5c51">
+    <meta name="msapplication-TileImage" content="/favicon-144.png">
+    <meta name="msapplication-config" content="/browserconfig.xml" />  
+    <%- include("matomo") %>
+<style>
+@font-face {
+  font-family: "Elena";
+  src: url("/fonts/elena.ttf");
+}
+.elena-font {
+  font-family: Elena
+}
+#hoofs-left-1, #hoofs-left-2, #hoofs-right-1, #hoofs-right-2 {
+  transition: opacity 0.6s;
+}
+
+#hoofs-left-1 {
+  transform: translate3d(var(--hoof-l-1-x),var(--hoof-l-1-y),0);
+  opacity: var(--hoof-l-1-opacity, 1);
+}
+#hoofs-left-2 {
+  transform: translate3d(var(--hoof-l-2-x),var(--hoof-l-2-y),0);
+  opacity: var(--hoof-l-2-opacity, 1);
+}
+#hoofs-right-1 {
+  transform: translate3d(var(--hoof-r-1-x),var(--hoof-r-1-y),0);
+  opacity: var(--hoof-r-1-opacity, 1);
+}
+#hoofs-right-2 {
+  transform: translate3d(var(--hoof-r-2-x),var(--hoof-r-2-y),0);
+  opacity: var(--hoof-r-2-opacity, 1);
+}
+#game {
+  width: 100%;
+  height: 50vw;
+}
+ul > li::before {
+  content: '';
+  background-image: url(/weihnachtsmütze.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: inline-block;
+  width: 1.9rem;
+  transform: translateY(0.3rem);
+  height: 2rem;
+  margin-left: -2rem;
+}
+#facts, #facts > * {
+  max-height: 85vh;
+}
+body {
+  background: #eea9ba;
+}
+</style>
+  </head>
+  <body class="w-full px-3 pt-3">
+    <div class="flex items-center justify-around">
+      <div class="hidden lg:block">
+        <img src="/erde.png" class="w-32">
+      </div>
+      <div class="text-lg max-w-xl flex flex-col content-center mt-12">
+        <div class="flex items-center justify-between">
+          <h1 class="font-bold text-4xl leading-tight mb-2 mr-2">
+            Türchen 12: Zoooooom!
+          </h1>
+        </div>
+        <p>
+          Heute ist große internationale Besprechung in der Werkstatt. Jedes
+          Jahr kommen dazu die Weihnachtshelfer:innen aus der ganzen Welt zum
+          Nordpol, um sich auf die kommende Zeit vorzubereiten und sich mit dem
+          Weihnachtsmann abzusprechen. Der Weihnachtsmann hat dieses Jahr jedoch
+          einen Workshop mit tollen Klimaaktivisti besucht und gelernt, dass
+          besonders ständige Reisen wegen der Arbeit unnötig sind und man das
+          ganze sogar richtig gut digital abhalten kann. Nachdem er sich ein
+          wenig mit dem Prinzip von Videokonferenzen auseinandergesetzt hatte,
+          fand er heraus, dass man sogar eigene Hintergründe einstellen kann. Um
+          während der internationalen Besprechung ein wenig lustige Atmosphäre
+          zu schaffen, überlegte sich der Weihnachtsmann die Hintergründe so zu
+          gestalten, dass es beispielsweise so aussah, als würden die
+          Helfer:innen mit ihm im Schlitten sitzen. Jetzt freute er sich noch
+          mehr auf die Konferenz und darauf, alle seine Helfer:innen zu sehen.
+        </p>
+        <div class="w-full">
+          <a class="mb-3 block" href="/zoom_weihnachtsmütze.png" target="_blank">
+            <img src="/zoom_weihnachtsmütze.png">
+          </a>
+          <a class="block" href="/zoom_schlitten.png" target="_blank">
+            <img src="/zoom_schlitten.png">
+          </a>
+        </div>
+      </div>
+      <div class="hidden sm:block">
+        <img src="/climate_justice_now_baumel.png" class="w-32">
+      </div>
+    </div>
+    <p class="max-w-xl mx-auto text-lg">
+      Downloade die virtuellen Hintergründe und schicke uns gerne ein Foto auf
+      <a href="https://instagram.com/klimaimadvent" class="text-green-light">Instagram</a>.
+    </p>
+  </body>
+</html>
