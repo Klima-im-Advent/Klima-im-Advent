@@ -1,0 +1,181 @@
+<!doctype html>
+<html>
+  <head>
+    <title>
+      Türchen 15 – Klima im Advent
+    </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:site" content="@klimaimadvent"/>
+    <meta name="twitter:title" content = "Klima im Advent" />
+    <meta
+      name = "twitter:description"
+      content = "Welches leckere Rezept wartet heute auf uns?"/>
+    <meta name = "twitter:image" content="/twitter_preview.jpg"/> 
+    <link rel="icon" href="/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="/favicon-57.png" sizes="57x57">
+    <link rel="icon" href="/favicon-76.png" sizes="76x76">
+    <link rel="icon" href="/favicon-96.png" sizes="96x96">
+    <link rel="icon" href="/favicon-128.png" sizes="128x128">
+    <link rel="icon" href="/favicon-192.png" sizes="192x192">
+    <link rel="icon" href="/favicon-228.png" sizes="228x228">
+    <link rel="shortcut icon" sizes="196x196" href="/favicon-196.png">
+    <link rel="apple-touch-icon" href="/favicon-120.png" sizes="120x120">
+    <link rel="apple-touch-icon" href="/favicon-152.png" sizes="152x152">
+    <link rel="apple-touch-icon" href="/favicon-180.png" sizes="180x180">
+    <meta name="msapplication-TileColor" content="#9a5c51">
+    <meta name="msapplication-TileImage" content="/favicon-144.png">
+    <meta name="msapplication-config" content="/browserconfig.xml" />  
+    <%- include("matomo") %>
+<style>
+@font-face {
+  font-family: "Elena";
+  src: url("/fonts/elena.ttf");
+}
+.elena-font {
+  font-family: Elena
+}
+#hoofs-left-1, #hoofs-left-2, #hoofs-right-1, #hoofs-right-2 {
+  transition: opacity 0.6s;
+}
+
+#hoofs-left-1 {
+  transform: translate3d(var(--hoof-l-1-x),var(--hoof-l-1-y),0);
+  opacity: var(--hoof-l-1-opacity, 1);
+}
+#hoofs-left-2 {
+  transform: translate3d(var(--hoof-l-2-x),var(--hoof-l-2-y),0);
+  opacity: var(--hoof-l-2-opacity, 1);
+}
+#hoofs-right-1 {
+  transform: translate3d(var(--hoof-r-1-x),var(--hoof-r-1-y),0);
+  opacity: var(--hoof-r-1-opacity, 1);
+}
+#hoofs-right-2 {
+  transform: translate3d(var(--hoof-r-2-x),var(--hoof-r-2-y),0);
+  opacity: var(--hoof-r-2-opacity, 1);
+}
+#game {
+  width: 100%;
+  height: 50vw;
+}
+ul > li::before {
+  content: '';
+  background-image: url(/weihnachtsmütze.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: inline-block;
+  width: 1.9rem;
+  transform: translateY(0.3rem);
+  height: 2rem;
+  margin-left: -2rem;
+}
+</style>
+  </head>
+  <body class="w-full bg-black text-white px-3">
+    <div class="flex justify-around items-center">
+      <div class="w-32 hidden lg:block">
+        <img src="/kreide_baum.png">
+      </div>
+      <div class="max-w-xl text-lg">
+        <h1 class="text-4xl font-semibold">
+          Türchen 15: Kekse gut, alles Gut
+        </h1>
+        <p>
+          Zu einem schönen Glas Leitungswasser darf natürlich etwas zu knabbern
+          nicht fehlen. Gerade so kurz vor Heiligabend ist der Weihnachtsmann oft
+          ein bisschen gestresst und es gibt nichts, was da beruhigender auf ihn
+          wirkt als ein gut gebackener Keks – außerdem freut sich sein Bauch
+          darüber und Dino sicher auch. Deshalb legt der Weihnachtsmann jetzt den
+          Zeitungsartikel aus der Hand, erhebt sich langsam aus dem gemütlichen,
+          kaminroten, Ohrensessel, setzt sich den Wichtel auf die Linke, den Elfen
+          auf die rechte Schulter und marschiert so in Richtung große Küche.
+        </p>
+        <p>
+Der Weihnachtsmann hat ein großes Haus, deshalb dauert der Weg zur Küche ein
+bisschen länger als bei euch zuhause. Als er durch die Lagerhallen für Geschenke
+läuft, beginnt der Wichtel auf der linken Schulter aufgeregt hoch- und
+runterzuspringen: „Sie backen schon, sie backen schon – riecht ihr es auch?“
+quietscht er aufgeregt. Und tatsächlich: auch der Weihnachtsmann riecht unter
+seinem dicken, langen, weißen Bart den süßen Duft von frischgebackenen Keksen.
+„Ohhh, was ein schöner Duft.“ Ruft der Weihnachtsmann. „Ahh das werden gute
+Plätzchen“ sagt der Elf. „gurgerummel“ machen ihre drei Bäuche gleichzeitig und
+schon läuft auch der Weihnachtsmann schnell dem Duft hinterher. Durch den
+Schlittenhangar, vorbei an Dinos Zimmer -„ich glaube ich rieche Vanille“ ruft
+der Wichtel – weiter die große Wendeltreppe hoch, rund um den goldenen Globus
+herum „…und Kakao! Kakao ist ganz bestimmt auch drinne!“ ergänzt der Elf - quer
+durch die Werkstatt, die große Rutsche heruntergerutscht und plötzlich bleibt
+der Weihnachtsmann stehen. Er reckt seine große Nase in die Luft, schnuppert,
+zieht seine buschigen Augenbrauen zusammen, schnuppert nochmal, säufzt dann und
+ruft „Verdammichnochmal. Das riecht nach angekohltem Wichtel!“ und dann rennt er
+so schnell in die Küche, dass sich die Elfe und der Wichtel ordentlich
+festhalten müssen. Als er die große goldene Tür zur weihnachtlichen Küche
+aufstößt, bietet sich den dreien ein abenteuerliches Bild. Zwei Wichtel
+versuchen mit einem selbst gebauten Katapult Brombeeren in eine Große Schüssel
+zu schießen, ein Wichtel klammert mit grünem Kopf an einem sich wild drehenden
+Mixer, vier andere versuchen verzweifelt den Mixer wieder einzufangen und über
+allem hängen 5 Wichtel mit zerzausten Haaren an dem großen Kronleuchter der
+bedenklich schaukelt. Ein Wichtel rennt mit lichterloh brennender Mütze vor dem
+Ofen im Kreis. Die Löschversuche der anderen Wichtel haben den Ofen vorzüglich
+gelöscht und einen Großteil der Küche unter Wasser gesetzt – nur die brennende
+Mütze konnten sie nicht löschen. Der Weihnachtsmann seufzt nochmal, hebt dann
+den brennenden Wichtel hoch und setzt ihn in die Küchenspüle. Zischhhh. Die
+Mütze ist gelöscht. „Wir hatten ja kein Rezept…“ „wir wollten nur schonmal
+anfangen“ „Es hat auch alles geklappt, aber dann plötzlich…“ „irgendwie“
+Versuchen die Wichtel das Chaos kleinlaut zu erklären. Da zieht der
+Weihnachtsmann das Rezept von Dino`s Lieblingsplätzchen aus seiner Tasche und
+verteilt an alle Wichtel ihre Aufgaben.
+        </p>
+      </div>
+      <div class="w-32 hidden sm:block">
+        <img src="/kreide_snowperson.png">
+      </div>
+    </div>
+    <div class="flex w-full items-center justify-around py-12">
+      <div class="hidden xl:block w-16">
+        <img src="/kreide_glocke.png">
+      </div>
+      <div class="hidden sm:block w-12">
+        <img src="/kreide_schneeflocke.png">
+      </div>
+      <div class="w-48">
+        <img src="/kreide_yummy.png">
+      </div>
+      <div class="hidden sm:block w-12">
+        <img src="/kreide_schneeflocke2.png">
+      </div>
+      <div class="hidden xl:block w-16">
+        <img src="/kreide_kugel_red.png">
+      </div>
+    </div>
+    <div class="w-full">
+      <img src="/jonathan_rezept.jpeg">
+    </div>
+    <p>
+     Mit der Hilfe von Elfe und Weihnachtsmann backten die Wichtel wunderbare
+     Weihnachtsplätzchen und am Abend überraschten sie Dino mit einem riesengroßen
+     Teller mit seinen Lieblingsplätzchen.
+    </p>
+    <div class="flex w-full items-center justify-around py-12">
+      <div class="hidden xl:block w-10">
+        <img src="/kreide_candle.png">
+      </div>
+      <div class="hidden sm:block w-16">
+        <img src="/kreide_gift.png">
+      </div>
+      <div class="w-20">
+        <img src="/kreide_heart.png">
+      </div>
+      <div class="hidden sm:block w-32">
+        <img src="/kreide_bon_appetit.png">
+      </div>
+      <div class="hidden xl:block w-10">
+        <img src="/kreide_candle2.png">
+      </div>
+    </div> 
+  </body>
+</html>
