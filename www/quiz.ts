@@ -226,5 +226,7 @@ share.addEventListener('click', () => {
 			.share({url, title, text})
 			.then(() => console.log("Shared successfully"))
 			.catch(console.error);
+	} else {
+		share.style.display = "none";
   }
 });

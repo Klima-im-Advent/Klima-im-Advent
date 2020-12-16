@@ -13,10 +13,10 @@
     <meta property="og:site_name" content="Aktivistiertest"/>
     <meta
       property="og:image:secure_url"
-      content="https://klimaimadvent.de/<%= preview || "bieber" %>.png"/>
+      content="https://klimaimadvent.de/<%= preview || "bieber" %>_preview.png"/>
     <meta
       property="og:image"
-      content="https://klimaimadvent.de/<%= preview || "bieber" %>.png"/>
+      content="https://klimaimadvent.de/<%= preview || "bieber" %>_preview.png"/>
     <meta property="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -26,7 +26,7 @@
     <meta name="twitter:description" content = "Welches Aktivistier bist du?"/>
     <meta
       name="twitter:image"
-      content="https://klimaimadvent.de/<%= preview || "bieber" %>.png"/>  
+      content="https://klimaimadvent.de/<%= preview || "bieber" %>_preview.png"/>  
     <link rel="icon" href="/favicon-32.png" sizes="32x32">
     <link rel="icon" href="/favicon-57.png" sizes="57x57">
     <link rel="icon" href="/favicon-76.png" sizes="76x76">
@@ -43,6 +43,9 @@
     <meta name="msapplication-config" content="/browserconfig.xml" />  
     <%- include("matomo") %>
 <style>
+#test {
+  background: url("/jonas_background.jpg");
+}
 @font-face {
   font-family: "Elena";
   src: url("/fonts/elena.ttf");
@@ -115,9 +118,26 @@ ul > li::before {
 </style>
   </head>
   <body class="w-full text-red-dark redressed-font">
+    <div class="flex items-center justify-between max-w-lg mx-auto mt-3">
+      <h1 class="font-bold text-4xl leading-tight mb-2 mr-2">
+        Türchen 16: Aktivistier!
+      </h1>
+    </div>
+    <p class="font-sans max-w-lg mx-auto text-black">
+      Nachdem der Weihnachtsmann heute noch leckere Muffins vom Vortag
+      gefrühstückt hatte, bekam er auf einmal einen enormen Energieschub. Er
+      begann die Werkstatt auf Vordermann zu bringen, half den Elfen dabei,
+      die ersten Geschenke zu verpacken und spielte fangen mit den Wichteln.
+      Als er gerade damit fertig war, die Rentiere mit frischen Stroh zu
+      versorgen, hatte er jedoch erstmal keine Lust mehr weiterzuarbeiten und
+      legte sich eng an eines der Rentierkälber gekuschelt auf den Boden. Als
+      dieses bald eingeschlafen war, zückte er sein Santaphone und fing an im
+      Internet umherzuscrollen. Dabei landete er auf einer Seite mit lustigen
+      Tests und begann auch schon den ersten:
+    </p> 
     <div
-      class="flex flex-col h-screen justify-between p-1 items-center max-w-xl
-      mx-auto pb-3">
+      class="flex flex-col h-screen justify-between p-1 items-center max-w-xl mx-auto pb-3"
+      id="test">
       <div class="flex justify-center content-center items-center mt-2">
         <div class="bg-red-dark w-32 rounded-md relative">
           <div
