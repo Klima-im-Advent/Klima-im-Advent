@@ -180,6 +180,8 @@ startQuiz.addEventListener('click', () => {
   }
 });
 
+let winner = null;
+
 for	(let	i	=	0;	i	<	4;	++i)	{
 	answerElements[i].addEventListener("click", () => {
 		const result = answers[current][i].result as "bieber" | "küken"
@@ -200,7 +202,7 @@ for	(let	i	=	0;	i	<	4;	++i)	{
 							.entries(results)
 							.sort((a, b) => b[1] - a[1])[0][0] as
 								"bieber" | "küken" | "eichhörnchen" | "hase";
-					const winner = resolutions[winnerId];
+					winner = resolutions[winnerId];
 				for (let i = 0; i < questionScreen.length; ++i) {
 					(questionScreen[i] as HTMLElement).style.display = "none";
 				}
@@ -218,8 +220,7 @@ const share = document.getElementById('share')!;
 share.addEventListener('click', () => {
   const url = "https://klimaimadvent.de/tag/16"
   const title = "Finde jetzt heraus welches Aktivistier du bist";
-	const text
-		= "Wolltest du auch immer schon wissen was dein Spiritanimal ist? Dann mach jetzt den Test";
+	const text = `Ich bin ${winner.name}. Willst du wissen was dein Aktivistier ist? Dann mach jetzt den Test`;
 	if (navigator.share) {
 		navigator
 			.share({url, title, text})
