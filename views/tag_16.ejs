@@ -11,8 +11,12 @@
     <meta property="og:description" content="Finde jetzt heraus welches Aktivistier deiner Persönlichkeit entspricht"/>
     <meta property="og:url" content="https://klimaimadvent.de/tag/16"/>
     <meta property="og:site_name" content="Aktivistiertest"/>
-    <meta property="og:image:secure_url" content="https://klimaimadvent.de/bieber_preview.jpg"/>
-    <meta property="og:image" content="https://klimaimadvent.de/bieber_preview.jpg"/>
+    <meta
+      property="og:image:secure_url"
+      content="https://klimaimadvent.de/<%= preview || "bieber" %>.png"/>
+    <meta
+      property="og:image"
+      content="https://klimaimadvent.de/<%= preview || "bieber" %>.png"/>
     <meta property="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,7 +24,9 @@
     <meta name="twitter:site" content="@klimaimadvent"/>
     <meta name="twitter:title" content = "Klima im Advent" />
     <meta name="twitter:description" content = "Welches Aktivistier bist du?"/>
-    <meta name="twitter:image" content="https://klimaimadvent.de/bieber_preview.jpg"/>  
+    <meta
+      name="twitter:image"
+      content="https://klimaimadvent.de/<%= preview || "bieber" %>.png"/>  
     <link rel="icon" href="/favicon-32.png" sizes="32x32">
     <link rel="icon" href="/favicon-57.png" sizes="57x57">
     <link rel="icon" href="/favicon-76.png" sizes="76x76">

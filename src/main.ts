@@ -4,7 +4,7 @@ const app = express();
 app.set("view engine", "ejs");
 
 app.get("/", (request, response) => {
-	response.render("index", { currentDay: 15 });
+	response.render("index", { currentDay: 16 });
 });
 app.get("/tag/:number", (request, response) => {
 	if (request.params.number === "6") {
@@ -12,7 +12,11 @@ app.get("/tag/:number", (request, response) => {
 			links: ["https://seashepherd.org/support-us/", "https://act.350.org/donate/build/", "https://www.climatecouncil.org.au/donate/", "https://www.greenpeace.de/spenden", "https://seebruecke.org/spenden/", "https://www.germanzero.de/spenden", ]
 		});
 	} else {
-		response.render(`tag_${request.params.number}`);
+		response.render(
+			`tag_${request.params.number}`,
+			{
+				"preview": request.query.preview
+			});
 	}
 });
 app.use(express.static("static"));
