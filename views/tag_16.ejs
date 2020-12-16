@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>
-      Türchen 8 – Klima im Advent
+      Türchen 16 – Klima im Advent
     </title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -94,10 +94,10 @@ ul > li::before {
   display: none;
 }
 
-.start-screen,.question-screen {
+.end-screen,.question-screen {
   display: none;
 }
-.end-screen {
+.start-screen {
   display: block;
 }
 </style>
@@ -127,6 +127,7 @@ ul > li::before {
       </div>
       <div class="">
         <button
+          id="start-quiz"
           class=
           "inline-block text-white bg-red-dark rounded-full redressed-font text-6xl
           px-16 relative start-screen">
@@ -176,21 +177,14 @@ ul > li::before {
         Du bist…
       </div>
       <div class="end-screen">
-        <img src="/bieber.png" class="my-3">
+        <img class="my-3" id="aktivistier-image">
       </div>
       <div class="flex flex-col items-center end-screen">
-        <h2 class="text-4xl">
-          Der Bieber
-        </h2>
-        <p class="font-sans bg-red-dark text-white p-2 rounded-xl mb-1">
-          Am liebsten trägt dieses Aktivistier eine alte Latzhose – die hat vieeele
-          Taschen. Wenn während der Demo etwas runterfällt, was nicht runterfallen
-          sollte, ist der Bieber sofort zur Stelle und fischt aus einer seiner
-          Taschen eine Rolle Panzerband. Sonst ist er eher im Hintergrund, regelt am
-          Mischpult, baut Technik auf und ab – und niemand hat so einen guten
-          Überblick über das Lager wie er… eigentlich hat niemand sonst überhaupt
-          einen Überblick über das Lager.
-        </p>
+        <h2 class="text-4xl" id="aktivistier-title"></h2>
+        <p class="font-sans bg-red-dark text-white p-2 rounded-xl mb-1" id="aktivistier-description"></p>
+        <button class="mx-auto block bg-red-dark text-white rounded-lg p-3 text-3xl m-3" id="share">
+          Teile dein Ergebnis
+        </button>
       </div>
     </div>
     <script src="/js/quiz.js"></script>

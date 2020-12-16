@@ -23,14 +23,14 @@ const	answers	=	[
 				},
 				{
 						text:	"Ich	trommele	meine	OG	zusammen	und	wir	machen	eine	Soli-Demo",
-						result:	"katze",
+						result:	"hase",
 				}
 		],
 		[
 				{
 					text:
 						"Ich	beantrage	bei	der	FFF-Finanz	AG	Geld,	um	für	meine	OG	einen	Mate	Vorrat	aufzubauen",
-					result:	"katze"
+					result:	"hase"
 				},
 				{
 					text:
@@ -61,7 +61,7 @@ const	answers	=	[
 			{
 				text:
 					"Du	hast	jetzt	schon	mehrere	Beispieltweets	in	die	OG-Gruppe	geschrieben	und	das	Sharepic	für	den	OG	Account	ist	auch	fertig	–	kann	also	losgehen!",
-				result:	"katze"
+				result:	"hase"
 			},
 			{
 				text:
@@ -78,7 +78,7 @@ const	answers	=	[
 			{
 				text:
 					"Du	mobilisierst	deine	OG.	Jetzt	braucht	es	Trello	listen,	Zoom	Konferenzen,	Plena	und	vieeel	Planung.	Wer	verteilt	Plakate?	Wer	diskutiert	mit	dem	Ordnungsamt?",
-				result:	"katze",
+				result:	"hase",
 			},
 			{
 				text:
@@ -100,7 +100,7 @@ const	answers	=	[
 			{
 				text:
 					"Redner*innenliste	✓,	NGOs	eingeladen	✓,	Banner	gemalt	✓<br>	Es	kann	losgehen,	du	fällst	deinen	Freund*innen	glücklich	in	die	Arme.",
-				result:	"katze",
+				result:	"hase",
 			},
 			{
 				text:
@@ -133,31 +133,97 @@ const	steps	=	[
 	document.getElementById("step-5")!,
 ]
 const	results	=	{
-		"bieber":				0,
-		"küken":		0,
-		"eichhörnchen":	0,
-		"katze":		0
+	"bieber":				0,
+	"küken":		0,
+	"eichhörnchen":	0,
+	"hase":		0
 };
+
+const resolutions = {
+	"bieber": {
+		name: "Der Bieber",
+		description:
+				"Am liebsten trägt dieses Aktivistier eine alte Latzhose – die hat vieeele Taschen. Wenn während der Demo etwas runterfällt, was nicht runterfallen sollte, ist der Bieber sofort zur Stelle und fischt aus einer seiner Taschen eine Rolle Panzerband. Sonst ist er eher im Hintergrund, regelt am Mischpult, baut Technik auf und ab – und niemand hat so einen guten Überblick über das Lager wie er… eigentlich hat niemand sonst überhaupt einen Überblick über das Lager.",
+	},
+	"küken": {
+		name: "Das Küken",
+		description:
+			"Das Küken ist ganz neu bei FFF. Auf den Demos ist es immer mit den schönsten Schildern dabei und freut sich, wenn die es in die Zeitung schaffen. Außerdem motiviert es immer seine ganzen Freund*innen mitzukommen. Bisher hat es sich noch nicht getraut, selber eine Rede zu halten – aber manchmal überlegt es wie es wohl wäre auf der großen Bühne zu stehen. Vielleicht fragt es den Hasen mal…",
+	},
+	"eichhörnchen": {
+		name: "Das Eichhörnchen",
+		description:
+			"„Up with trees down with capitalism!“ steht auf dem Halstuch, das vom Eichhörnchen immer über Mund und Nase getragen wird. Das Eichhörnchen geht aufs Ganze. Es ist bei jeder Aktion dabei und scheut kein Risiko. Es hängt in den höchsten Bäumen im Danni, sitzblockiert im kältesten Winter und hilft sogar beim Kekse-Verkauf für die OG Kasse.",
+	},
+  "hase": {
+		name: "Der Hase",
+		description:
+			"Ohne den Hasen würde in der OG gar nichts laufen. Er hat den Überblick über bundesweite Abstimmungen, Social-Media Accounts und Info-Gruppen. Außerdem schafft sie es wie niemand sonst, die anderen Mitglieder in der OG zu motivieren und er ist der einzige, der es schafft den verplanten Bieber regelmäßig an wichtige Termine zu erinnern.",
+	}
+}
+
+const startScreen
+  = document.getElementsByClassName("start-screen");
+const questionScreen = document.getElementsByClassName('question-screen');
+const endScreen = document.getElementsByClassName('end-screen');
+const image = document.getElementById('aktivistier-image')! as HTMLImageElement;
+const title = document.getElementById('aktivistier-title')!;
+const description = document.getElementById('aktivistier-description')!;
+
+const startQuiz = document.getElementById('start-quiz')!;
+startQuiz.addEventListener('click', () => {
+  for (let i = 0; i < startScreen.length; ++i) {
+    (startScreen[i] as HTMLElement).style.display = "none";
+  }
+  for (let i = 0; i < questionScreen.length; ++i) {
+    (questionScreen[i] as HTMLElement).style.display = "block";
+  }
+});
+
 for	(let	i	=	0;	i	<	4;	++i)	{
-		answerElements[i].addEventListener(
-	"click",
-	()	=>	{
-			if	(current	<	4)	{
-		++results[
-				answers[current][i].result	as	"bieber"	|	"küken"	|	"eichhörnchen"	|
-			"katze"];
-		console.log(
-				Object
-				.entries(results)
-				.sort((a,b)	=>	b[1]	-	a[1])[0][0])
-			console.log(results);
-			steps[current].style.display	=	"None";
-			++current;
-			steps[current].style.display	=	"Block";
-			questionElement.innerText	=	questions[current];
-			for	(let	i	=	0;	i	<	4;	++i)	{
-				answerElements[i].innerHTML	=	answers[current][i].text;
-			}	
+	answerElements[i].addEventListener("click", () => {
+		const result = answers[current][i].result as "bieber" | "küken"
+			| "eichhörnchen" | "hase";
+				++results[result];
+				if (current < 4) {
+						steps[current].style.display = "none";
+						++current;
+						steps[current].style.display = "block";
+						questionElement.innerText    = questions[current];
+						for (let i = 0; i < 4; ++i) {
+								answerElements[i].innerHTML = answers[current][i].text;
+						}
 				}
-	});
-}	
+				else if (current === 4) {
+					const winnerId =
+						Object
+							.entries(results)
+							.sort((a, b) => b[1] - a[1])[0][0] as
+								"bieber" | "küken" | "eichhörnchen" | "hase";
+					const winner = resolutions[winnerId];
+				for (let i = 0; i < questionScreen.length; ++i) {
+					(questionScreen[i] as HTMLElement).style.display = "none";
+				}
+				for (let i = 0; i < endScreen.length; ++i) {
+					(endScreen[i] as HTMLElement).style.display = "block";
+				}
+					title.innerText = winner.name;
+					description.innerText = winner.description;
+					image.src = "/" + winnerId + ".png";
+				}
+		});
+}
+
+const share = document.getElementById('share')!;
+share.addEventListener('click', () => {
+  const url = "https://klimaimadvent.de/tag/16"
+  const title = "Finde jetzt heraus welches Aktivistier du bist";
+	const text
+		= "Wolltest du auch immer schon wissen was dein Spiritanimal ist? Dann mach jetzt den Test";
+	if (navigator.share) {
+		navigator
+			.share({url, title, text})
+			.then(() => console.log("Shared successfully"))
+			.catch(console.error);
+  }
+});
