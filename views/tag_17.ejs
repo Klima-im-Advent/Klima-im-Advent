@@ -1,0 +1,140 @@
+<!doctype html>
+<html>
+  <head>
+    <title>
+      Türchen 17 – Klima im Advent
+    </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:site" content="@klimaimadvent"/>
+    <meta name="twitter:title" content = "Klima im Advent" />
+    <meta
+      name = "twitter:description"
+      content = "An diesem Donnerstag bedanken wir uns bei einer Organisation, die für klimagerechte und soziale Landwirtschaft kämpft"/>
+    <meta name = "twitter:image" content="/twitter_preview.jpg"/> 
+    <link rel="icon" href="/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="/favicon-57.png" sizes="57x57">
+    <link rel="icon" href="/favicon-76.png" sizes="76x76">
+    <link rel="icon" href="/favicon-96.png" sizes="96x96">
+    <link rel="icon" href="/favicon-128.png" sizes="128x128">
+    <link rel="icon" href="/favicon-192.png" sizes="192x192">
+    <link rel="icon" href="/favicon-228.png" sizes="228x228">
+    <link rel="shortcut icon" sizes="196x196" href="/favicon-196.png">
+    <link rel="apple-touch-icon" href="/favicon-120.png" sizes="120x120">
+    <link rel="apple-touch-icon" href="/favicon-152.png" sizes="152x152">
+    <link rel="apple-touch-icon" href="/favicon-180.png" sizes="180x180">
+    <meta name="msapplication-TileColor" content="#9a5c51">
+    <meta name="msapplication-TileImage" content="/favicon-144.png">
+    <meta name="msapplication-config" content="/browserconfig.xml" />  
+    <%- include("matomo") %>
+<style>
+@font-face {
+  font-family: "Elena";
+  src: url("/fonts/elena.ttf");
+}
+.elena-font {
+  font-family: Elena
+}
+#hoofs-left-1, #hoofs-left-2, #hoofs-right-1, #hoofs-right-2 {
+  transition: opacity 0.6s;
+}
+
+#hoofs-left-1 {
+  transform: translate3d(var(--hoof-l-1-x),var(--hoof-l-1-y),0);
+  opacity: var(--hoof-l-1-opacity, 1);
+}
+#hoofs-left-2 {
+  transform: translate3d(var(--hoof-l-2-x),var(--hoof-l-2-y),0);
+  opacity: var(--hoof-l-2-opacity, 1);
+}
+#hoofs-right-1 {
+  transform: translate3d(var(--hoof-r-1-x),var(--hoof-r-1-y),0);
+  opacity: var(--hoof-r-1-opacity, 1);
+}
+#hoofs-right-2 {
+  transform: translate3d(var(--hoof-r-2-x),var(--hoof-r-2-y),0);
+  opacity: var(--hoof-r-2-opacity, 1);
+}
+#game {
+  width: 100%;
+  height: 50vw;
+}
+ul > li::before {
+  content: '';
+  background-image: url(/weihnachtsmütze.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: inline-block;
+  width: 1.9rem;
+  transform: translateY(0.3rem);
+  height: 2rem;
+  margin-left: -2rem;
+}
+</style>
+  </head>
+  <body class="w-full text-white bg-black px-3 pt-3">
+    <div class="block max-h-screen">
+      <img
+        src="/danke_silbernetz.jpg"
+        alt=""
+        class="max-h-screen mx-auto rounded-3xl border-2">
+    </div>
+    <div>
+    <div class="flex items-center justify-around">
+      <div class="hidden lg:block">
+        <img src="/kreide_snowperson.png" class="w-32">
+      </div>
+      <div class="text-lg max-w-xl flex flex-col content-center mt-12">
+        <div class="flex items-center justify-between">
+          <h1 class="font-bold text-4xl leading-tight mb-2 mr-2">
+            Türchen 17: Danke-Donnerstag
+          </h1>
+          <img src="/buch_gute_taten.png" class="w-24">
+        </div>
+        <p>
+          Heute kam Sophia, die älteste Elfe, schon am Morgen mit einem ganz
+          besonderen Brief zum Weihnachtsmann. Sie hatte den Brief eines kleines
+          Mädchens gefunden, das sich zu Weihnachten wünschte, dass seine ältere
+          Nachbarin nicht so einsam ist. In dem Brief wünschte sie sich, Hilfe für
+          die vielen alten Menschen, die sonst besonders an Weihnachten ganz
+          allein sind und dass sich jemand um sie kümmerte. Sophia und der
+          Weihnachtsmann waren so gerührt von dem Brief, dass sie beschlossen sich
+          auf der Stelle schlau zu machen und eine Lösung für die Einsamkeit zu
+          finden. Bei ihrer Suche stießen sie auf den Verein
+          <a
+            href="https://silbernetz.org"
+            class="text-green-light">Silbernetz</a>, der Telefonate gegen die
+          Vereinsamung organisierte und schon vielen Menschen geholfen hatte.
+          Der Weihnachtsmann war total begeistert und beschloss auch selbst in
+          Zukunft etwas häufiger seine Liebsten anzurufen. Denn Weihnachten war
+          ja das Fest der Liebe, die sollten dann auch alle spüren können.
+        </p>
+        <p>
+          Wenn auch du einsame Menschen in diesen Zeiten unterstützen willst,
+          dann guck doch bei
+          <a
+             href="https://silbernetz.org"
+             class="text-green-light"
+          >Silbernetz</a> vorbei
+        </p>
+        <p>
+          Für wen oder was seid ihr in der Weihnachtszeit dankbar?
+          Schreibt uns für was ihr dankbar seid auf
+          <a
+            href="https://instagram.com/klimaimadvent"
+            class="text-green-light"
+            >
+            Instagram
+          </a>
+        </p>
+      </div>
+      <div class="hidden sm:block">
+        <img src="/kreide_baum.png" class="w-32">
+      </div>
+    </div>
+  </body>
+</html>
