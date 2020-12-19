@@ -4,7 +4,7 @@ const app = express();
 app.set("view engine", "ejs");
 
 app.get("/", (request, response) => {
-	response.render("index", { currentDay: 18 });
+	response.render("index", { currentDay: 19 });
 });
 app.get("/tag/:number", (request, response) => {
 	if (request.params.number === "6") {

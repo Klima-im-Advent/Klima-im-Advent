@@ -1,0 +1,224 @@
+<!doctype html>
+<html>
+  <head>
+    <title>
+      Türchen 19 – Klima im Advent
+    </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:site" content="@klimaimadvent"/>
+    <meta name="twitter:title" content = "Klima im Advent" />
+    <meta name = "twitter:description" content = "Bastelspaß an Weihnachten" />
+    <meta name = "twitter:image" content="/twitter_preview.jpg"/> 
+    <link rel="icon" href="/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="/favicon-57.png" sizes="57x57">
+    <link rel="icon" href="/favicon-76.png" sizes="76x76">
+    <link rel="icon" href="/favicon-96.png" sizes="96x96">
+    <link rel="icon" href="/favicon-128.png" sizes="128x128">
+    <link rel="icon" href="/favicon-192.png" sizes="192x192">
+    <link rel="icon" href="/favicon-228.png" sizes="228x228">
+    <link rel="shortcut icon" sizes="196x196" href=“/favicon-196.png">
+    <link rel="apple-touch-icon" href="/favicon-120.png" sizes="120x120">
+    <link rel="apple-touch-icon" href="/favicon-152.png" sizes="152x152">
+    <link rel="apple-touch-icon" href="/favicon-180.png" sizes="180x180">
+    <meta name="msapplication-TileColor" content="#9a5c51">
+    <meta name="msapplication-TileImage" content="/favicon-144.png">
+    <meta name="msapplication-config" content="/browserconfig.xml" />  
+    <%- include("matomo") %>
+<style>
+#hoofs-left-1, #hoofs-left-2, #hoofs-right-1, #hoofs-right-2 {
+  transition: opacity 0.6s;
+}
+
+#hoofs-left-1 {
+  transform: translate3d(var(--hoof-l-1-x),var(--hoof-l-1-y),0);
+  opacity: var(--hoof-l-1-opacity, 1);
+}
+#hoofs-left-2 {
+  transform: translate3d(var(--hoof-l-2-x),var(--hoof-l-2-y),0);
+  opacity: var(--hoof-l-2-opacity, 1);
+}
+#hoofs-right-1 {
+  transform: translate3d(var(--hoof-r-1-x),var(--hoof-r-1-y),0);
+  opacity: var(--hoof-r-1-opacity, 1);
+}
+#hoofs-right-2 {
+  transform: translate3d(var(--hoof-r-2-x),var(--hoof-r-2-y),0);
+  opacity: var(--hoof-r-2-opacity, 1);
+}
+#game {
+  width: 100%;
+  height: 50vw;
+}
+</style>
+  </head>
+  <body class="w-full bg-white">
+    <img
+      src="/hoofs_left_2.png"
+      class="absolute left-0 top-0 hidden lg:block"
+      id="hoofs-left-2">
+    <img
+      src="/hoofs_right_2.png"
+      class="absolute left-0 top-0 hidden lg:block"
+      id="hoofs-right-2">
+    <img
+      src="/hoofs_left_1.png"
+      class="absolute left-0 top-0 hidden lg:block"
+      id="hoofs-left-1">
+    <img
+      src="/hoofs_right_1.png"
+      class="absolute left-0 top-0 hidden lg:block"
+      id="hoofs-right-1">
+    <div
+      class="flex flex-col bg-white max-w-xl mx-auto"
+      >
+      <main class="mt-5 -mr-4 px-8 pb-3">
+        <div class="flex items-center justify-between">
+          <h1
+            class="font-bold text-3xl leading-tight mb-2 mr-2 relative">
+            Türchen 19
+          </h1>
+          <img src="/pinguin.png" class="w-12">
+        </div>
+        <p>
+          Tobi, der jüngste Weihnachtswichtel wollte dem Weihnachtsmann heute
+          helfen. Schließlich rannte dieser schon seit Tagen durch die
+          Weihnachtswerkstatt und machte noch alle Geschenke fertig. Anders als
+          in den letzten Jahren war die Werkstatt aber noch nicht geschmückt,
+          schließlich wird der Weihnachtsmann auch nicht jünger und hat es
+          dieses Jahr schlichtweg vergessen. Für Tobi und seine Wichtelfreunde
+          fehlte dadurch aber das typische Weihnachtsgefühl, also schnappten sie
+          sich alle Reste, die sie irgendwie in der Werkstatt finden konnten und
+          überlegten sich, wie man aus dem Müll vielleicht noch ein wenig schöne
+          Deko machen konnte. Sie bastelten und bastelten. Als sie fertig waren,
+          hatten sie die gesamte Werkstatt mit kleinen Weihnachtsbäumchen und
+          Laternen in ein wahres Weihnachtswunder verwandelt. Zur gleichen Zeit
+          machte der Weihnachtsmann Feierabend sah zum ersten Mal die völlig
+          veränderte Werkstatt. Sein Gesichtsausdruck war eine Mischung aus
+          Überraschung und doch auch Freude über die vielen kleinen Dekorationen
+          an jeder Ecke. 
+        </p>
+        <p>
+          Wenn ihr auch noch ein wenig Weihnachtsdeko, oder kreative Geschenke
+          braucht, findet ihr im heutigen Türchen eine Bastelanleitung für:
+        </p>
+        <button id="show-tetra">
+            <img src="/tetrapak/2.png" class="rounded-lg">
+        </button>
+      </div>
+      <div
+        class="bg-green-light w-full h-full rounded-lg pt-2 hidden"
+        id="tetrapak">
+        <button
+          class="bg-black text-white p-2 mx-auto rounded-lg block text-2xl"
+          id="hide-tetra">
+          Schließen
+        </button>
+        <div class="flex flex-wrap justify-center">
+          <div class="max-w-md m-2 rounded-lg">
+            <img src="/tetrapak/1.png" class="rounded-lg">
+          </div>
+          <div class="max-w-md m-2 rounded-lg">
+            <img src="/tetrapak/3.png" class="rounded-lg">
+          </div>
+          <div class="max-w-md m-2 rounded-lg">
+            <img src="/tetrapak/4.png" class="rounded-lg">
+          </div>
+          <div class="max-w-md m-2 rounded-lg">
+            <img src="/tetrapak/5.png" class="rounded-lg">
+          </div>
+          <div class="max-w-md m-2 rounded-lg">
+            <img src="/tetrapak/6.png" class="rounded-lg">
+          </div>
+          <div class="max-w-md m-2 rounded-lg">
+            <img src="/tetrapak/7.png" class="rounded-lg">
+          </div>
+          <div class="max-w-md m-2 rounded-lg">
+            <img src="/tetrapak/8.png" class="rounded-lg">
+          </div>
+          <div class="max-w-md m-2 rounded-lg">
+            <img src="/tetrapak/9.png" class="rounded-lg">
+          </div>
+          <div class="max-w-md m-2 rounded-lg">
+            <img src="/tetrapak/10.png" class="rounded-lg">
+          </div>
+        </div>
+      </div>
+      <div class="max-w-xl mx-auto px-8 pr-3">
+        <button id="show-baum">
+            <img src="/weihnachtsbaum/4.png" class="rounded-lg">
+        </button>
+      </main>
+    </div>
+     <div
+      class="bg-green-light w-full h-full rounded-lg pt-2 hidden"
+      id="baum">
+        <button
+          class="bg-black text-white p-2 mx-auto rounded-lg block text-2xl"
+          id="hide-baum">
+          Schließen
+        </button>
+        <div class="flex flex-wrap justify-center">
+          <div class="max-w-md m-2 rounded-lg">
+            <img src="/weihnachtsbaum/2.png" class="rounded-lg">
+          </div>
+          <div class="max-w-md m-2 rounded-lg">
+            <img src="/weihnachtsbaum/4.png" class="rounded-lg">
+          </div>
+          <div class="max-w-md m-2 rounded-lg">
+            <img src="/weihnachtsbaum/6.png" class="rounded-lg">
+          </div>
+          <div class="max-w-md m-2 rounded-lg">
+            <img src="/weihnachtsbaum/8.png" class="rounded-lg">
+          </div>
+          <div class="max-w-md m-2 rounded-lg">
+            <img src="/weihnachtsbaum/9.png" class="rounded-lg">
+          </div>
+          <div class="max-w-md m-2 rounded-lg">
+            <img src="/weihnachtsbaum/11.png" class="rounded-lg">
+          </div>
+          <div class="max-w-md m-2 rounded-lg">
+            <img src="/weihnachtsbaum/14.png" class="rounded-lg">
+          </div>
+        </div>
+      </div> 
+    <p class="max-w-xl mx-auto px-8">
+      Klicke auf die Bilder, um die Anleitungen zu sehen und viel Spaß beim
+      Basteln!
+    </p>
+    <p class="max-w-xl mx-auto px-8">
+    Schick uns gerne deine Kreationen auf
+    <a class="text-green-dark" href="https://instagram.com/klimaimadvent">
+      Instagram
+    </a> :)
+    </p>
+    <script src="/js/tag_1.js">
+    </script>
+  <script>
+    var showTetra = document.getElementById("show-tetra");
+    var hideTetra = document.getElementById("hide-tetra");
+    var tetra = document.getElementById('tetrapak');
+
+    showTetra.addEventListener('click', function() {
+      tetra.classList.remove('hidden');
+    });
+    hideTetra.addEventListener('click', function() {
+      tetra.classList.add('hidden');
+    });
+
+    var showBaum = document.getElementById("show-baum");
+    var hideBaum = document.getElementById("hide-baum");
+    var baum = document.getElementById('baum');
+
+    showBaum.addEventListener('click', function() {
+      baum.classList.remove('hidden');
+    });
+    hideBaum.addEventListener('click', function() {
+      baum.classList.add('hidden');
+    }); 
+  </script>
+  </body>
+</html>
