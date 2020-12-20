@@ -1,0 +1,159 @@
+<!doctype html>
+<html>
+  <head>
+    <title>
+      Türchen 18 – Klima im Advent
+    </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:site" content="@klimaimadvent"/>
+    <meta name="twitter:title" content = "Klima im Advent" />
+    <meta
+      name = "twitter:description"
+      content = "Heute gibt es ein leckeres Weihnachtsessen aus dem Saarland"/>
+    <meta name = "twitter:image" content="/twitter_preview.jpg"/> 
+    <link rel="icon" href="/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="/favicon-57.png" sizes="57x57">
+    <link rel="icon" href="/favicon-76.png" sizes="76x76">
+    <link rel="icon" href="/favicon-96.png" sizes="96x96">
+    <link rel="icon" href="/favicon-128.png" sizes="128x128">
+    <link rel="icon" href="/favicon-192.png" sizes="192x192">
+    <link rel="icon" href="/favicon-228.png" sizes="228x228">
+    <link rel="shortcut icon" sizes="196x196" href="/favicon-196.png">
+    <link rel="apple-touch-icon" href="/favicon-120.png" sizes="120x120">
+    <link rel="apple-touch-icon" href="/favicon-152.png" sizes="152x152">
+    <link rel="apple-touch-icon" href="/favicon-180.png" sizes="180x180">
+    <meta name="msapplication-TileColor" content="#9a5c51">
+    <meta name="msapplication-TileImage" content="/favicon-144.png">
+    <meta name="msapplication-config" content="/browserconfig.xml" />  
+    <%- include("matomo") %>
+<style>
+#basic-canvas {
+  width: calc(100vw - 2rem);
+  height: calc((100vw - 2rem) / 1.4);
+}
+@font-face {
+  font-family: "Elena";
+  src: url("/fonts/elena.ttf");
+}
+.elena-font {
+  font-family: Elena
+}
+#hoofs-left-1, #hoofs-left-2, #hoofs-right-1, #hoofs-right-2 {
+  transition: opacity 0.6s;
+}
+
+#hoofs-left-1 {
+  transform: translate3d(var(--hoof-l-1-x),var(--hoof-l-1-y),0);
+  opacity: var(--hoof-l-1-opacity, 1);
+}
+#hoofs-left-2 {
+  transform: translate3d(var(--hoof-l-2-x),var(--hoof-l-2-y),0);
+  opacity: var(--hoof-l-2-opacity, 1);
+}
+#hoofs-right-1 {
+  transform: translate3d(var(--hoof-r-1-x),var(--hoof-r-1-y),0);
+  opacity: var(--hoof-r-1-opacity, 1);
+}
+#hoofs-right-2 {
+  transform: translate3d(var(--hoof-r-2-x),var(--hoof-r-2-y),0);
+  opacity: var(--hoof-r-2-opacity, 1);
+}
+#game {
+  width: 100%;
+  height: 50vw;
+}
+ul > li::before {
+  content: '';
+  background-image: url(/weihnachtsmütze.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: inline-block;
+  width: 1.9rem;
+  transform: translateY(0.3rem);
+  height: 2rem;
+  margin-left: -2rem;
+}
+#facts, #facts > * {
+  max-height: 85vh;
+}
+</style>
+  </head>
+  <body class="w-full text-white bg-black px-3 pt-3">
+    <h1
+      class="font-bold text-3xl leading-tight mb-2 mr-2 relative text-center">
+      Türchen 20: Puzzlebäume
+    </h1> 
+    <p class="max-w-lg mx-auto">
+      Heute begab der Weihnachtsmann sich wieder an die letzten Geschenke. Er
+      verpackte fleißig alles von Büchern, über Schneekugeln, bis hin zu ganzen
+      Fahrrädern. Als er gerade völlig erschöpft den Lenker des letzten Fahrrads
+      fertig eingepackt hatte, kam ganz aufgeregt eine Gruppe Wichtel auf ihn
+      zugerannt. Sie plapperten unaufhörlich durcheinander, bis einer
+      schließlich das Wort an den Weihnachtsmann richtete. Es stellte sich
+      heraus, dass die Gruppe für das Verpacken der Puzzles zuständig war, sie
+      zu einem Puzzle aber leider den passenden Karton nicht mehr finden
+      konnten, weil sie vergessen hatten welches Motiv auf dem Puzzle abgebildet
+      war. Aber der Weihnachtsmann wäre ja nicht der Weihnachtsmann, wenn er
+      nicht auch für dieses Problem schnell eine Lösung finden würde. Und so
+      saßen sie schon bald alle zusammen auf dem Boden der Werkstatt, um das
+      Bild zusammenzupuzzlen und so den passenden Karton zu finden.
+    </p>
+    <p class="max-w-lg mx-auto">
+      Jetzt brauchen der Weihnachtsmann und die Wichtel allerdings noch deine
+      Hilfe, um das Puzzle so schnell wie möglich fertigzustellen.
+    </p>
+    <div id="basic-canvas">
+    </div>
+    <i>
+      Foto: Chris Grodotzki / Campact
+    </i>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/konva/7.2.2/konva.min.js" integrity="sha512-zbpQ5DaXc34MZEg81DJZSHALTkKr1+eOspsa01J4FSVqhUHjCa/V1xvur7imE4UZcj40uYDIR21MEpxzG2OHvw==" crossorigin="anonymous"></script>
+    <script src="/headbreaker.js"></script>
+    <script>
+      var initialWidth = 1040;
+      var height = 650;
+      var pieceSize = 130;
+      
+       let pettoruti = new Image();
+pettoruti.src = '/11.12.jpg';
+pettoruti.onload = () => {
+  const validated = new headbreaker.Canvas('basic-canvas', {
+    width: initialWidth, height,
+    pieceSize, proximity: 20,
+    borderFill: 13, strokeWidth: 1,
+    lineSoftness: 0.18, image: pettoruti,
+    // used to stick canvas to its current position
+    fixed: true,
+    preventOffstageDrag: true,
+  });
+  validated.autogenerate({
+    horizontalPiecesCount: initialWidth / pieceSize - 1,
+    verticalPiecesCount: height / pieceSize,
+    insertsGenerator: headbreaker.generators.flipflop,
+  });
+  validated.shuffle();
+  validated.attachSolvedValidator();
+  validated.onValid(() => {
+    setTimeout(() => {
+    }, 1500);
+  });
+['resize', 'load'].forEach((event) => {
+  window.addEventListener(event, () => {
+    var container = document.getElementById('basic-canvas');
+    validated.resize(container.offsetWidth, container.scrollHeight);
+    console.log(container.offsetWidth, container.scrollHeight);
+    validated.scale(container.offsetWidth / initialWidth);
+    validated.redraw();
+  });
+}); 
+}
+
+
+    </script>
+  </body>
+</html>
