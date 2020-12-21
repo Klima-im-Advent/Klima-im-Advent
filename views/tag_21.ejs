@@ -1,0 +1,176 @@
+<!doctype html>
+<html>
+  <head>
+    <title>
+      Türchen 12 – Klima im Advent
+    </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:site" content="@klimaimadvent"/>
+    <meta name="twitter:title" content = "Klima im Advent" />
+    <meta
+      name = "twitter:description"
+      content = "Hmm Kipferl"/>
+    <meta name = "twitter:image" content="/twitter_preview.jpg"/> 
+    <link rel="icon" href="/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="/favicon-57.png" sizes="57x57">
+    <link rel="icon" href="/favicon-76.png" sizes="76x76">
+    <link rel="icon" href="/favicon-96.png" sizes="96x96">
+    <link rel="icon" href="/favicon-128.png" sizes="128x128">
+    <link rel="icon" href="/favicon-192.png" sizes="192x192">
+    <link rel="icon" href="/favicon-228.png" sizes="228x228">
+    <link rel="shortcut icon" sizes="196x196" href="/favicon-196.png">
+    <link rel="apple-touch-icon" href="/favicon-120.png" sizes="120x120">
+    <link rel="apple-touch-icon" href="/favicon-152.png" sizes="152x152">
+    <link rel="apple-touch-icon" href="/favicon-180.png" sizes="180x180">
+    <meta name="msapplication-TileColor" content="#9a5c51">
+    <meta name="msapplication-TileImage" content="/favicon-144.png">
+    <meta name="msapplication-config" content="/browserconfig.xml" />  
+    <%- include("matomo") %>
+<style>
+@font-face {
+  font-family: "Elena";
+  src: url("/fonts/elena.ttf");
+}
+.elena-font {
+  font-family: Elena
+}
+#hoofs-left-1, #hoofs-left-2, #hoofs-right-1, #hoofs-right-2 {
+  transition: opacity 0.6s;
+}
+
+#hoofs-left-1 {
+  transform: translate3d(var(--hoof-l-1-x),var(--hoof-l-1-y),0);
+  opacity: var(--hoof-l-1-opacity, 1);
+}
+#hoofs-left-2 {
+  transform: translate3d(var(--hoof-l-2-x),var(--hoof-l-2-y),0);
+  opacity: var(--hoof-l-2-opacity, 1);
+}
+#hoofs-right-1 {
+  transform: translate3d(var(--hoof-r-1-x),var(--hoof-r-1-y),0);
+  opacity: var(--hoof-r-1-opacity, 1);
+}
+#hoofs-right-2 {
+  transform: translate3d(var(--hoof-r-2-x),var(--hoof-r-2-y),0);
+  opacity: var(--hoof-r-2-opacity, 1);
+}
+#game {
+  width: 100%;
+  height: 50vw;
+}
+ul > li::before {
+  content: '';
+  background-image: url(/weihnachtsmütze.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: inline-block;
+  width: 1.9rem;
+  transform: translateY(0.3rem);
+  height: 2rem;
+  margin-left: -2rem;
+}
+#facts, #facts > * {
+  max-height: 85vh;
+}
+body {
+  background: #eea9ba;
+}
+</style>
+  </head>
+  <body class="w-full px-3 pt-3">
+    <div class="flex justify-center">
+      <div class="max-w-full">
+        <img src="/haus_kipferl.png">
+      </div>
+    </div>
+    <div class="flex items-center justify-around">
+      <div class="hidden lg:block">
+        <img src="/keks_1.svg" class="w-32">
+      </div>
+      <div class="text-lg max-w-xl flex flex-col content-center mt-12">
+        <div class="flex items-center justify-between">
+          <h1 class="font-bold text-4xl leading-tight mb-2 mr-2">
+            Türchen 21: Kipferl
+          </h1>
+        </div>
+        <p>
+          Nach dem fleißigen Puzzle- und Verpackungstag gestern, brauchen die
+          Elfen und Wichtel am Nordpol heute mal wieder eine kleine Stärkung.
+          Nach langen Diskussionen und mehreren Abstimmungen (inklusive
+          Abstimmungen darüber, wie abgestimmt werden soll) einigten sich alle
+          auf ein einfaches Vanillekipferl-Rezept. Schon beim Sammeln der
+          notwendigen Zutaten kam es zur ersten Mehlschlacht. Nachdem sie voller
+          Mehl waren, fingen dann auch endlich alle an zu backen und hatten
+          schnell eine beachtliche Menge Vanillekipferl zusammen. Als diese kurz
+          darauf ein wenig abgekühlt waren und die Elfen den Puderzucker zum
+          Dekorieren auspackten entbrannte schnell die nächste Essensschlacht.
+          Diesmal schafften es lustigerweise alle, so sehr rumzutollen, dass am
+          Ende sowohl die Elfen und Wichtel als auch die Kipferl voller
+          Puderzucker waren, so hatten sie sich die Arbeit direkt gespart. Wenn
+          du auch gerne leckere und vegane Vanillekipferl backen möchtest,
+          findest du im heutigen Türchen das Originalrezept aus der
+          Elfenbäckerei.
+        </p>
+        <p>
+          <h2 class="elena-font text-2xl">
+            Zutaten
+          </h2>
+          <ul class="pl-8">
+            <li>
+              250&nbsp;g Mehl (Typ 405)
+            </li>
+            <li>
+              2&nbsp;Pck. Vanillezucker (nicht Vanillin)
+            </li>
+            <li>
+              1&nbsp;Prise Salz
+            </li>
+            <li>
+              100&nbsp;g gemahlene Mandeln
+            </li>
+            <li>
+              200&nbsp;g Margarine
+            </li>
+            <li>
+              100&nbsp;g Puderzucker
+            </li>
+            <li>
+              2&nbsp;Vanilleschoten
+            </li>
+          </ul>
+        </p>
+        <h2 class="elena-font text-2xl">
+          Zubereitung
+        </h2>
+        <p>
+          Alle Zutaten sollten Zimmertemperatur haben.
+        </p>
+        <p>
+          Die Zutaten von Mehl bis einschließlich Zucker miteinander verkneten
+          und aus dem Teig Kipferl formen. Diese auf ein Backblech setzen und
+          10-12 Minuten bei 175°C Umluft backen (Ober-/Unterhitze 200°C).
+        </p>
+        <p>
+          Die Kipferl sollten hell bleiben, nur ganz leicht gelb-bräunlich
+          werden.
+        </p>
+        <p>
+          In der Zwischenzeit den Puderzucker mit dem Mark der ausgekratzten
+          Vanilleschoten vermischen und die Vanillekipferl noch heiß darin
+          wälzen.
+        </p>
+      </div>
+      <div class="hidden sm:block">
+        <img src="/keks_2.svg" class="w-32">
+      </div>
+    </div>
+    <div class="flex justify-center">
+      <img src="/keks_3.svg">
+    </div>
+  </body>
+</html>
