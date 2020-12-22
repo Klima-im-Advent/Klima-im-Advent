@@ -1,0 +1,176 @@
+<!doctype html>
+<html>
+  <head>
+    <title>
+      Türchen 12 – Klima im Advent
+    </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:site" content="@klimaimadvent"/>
+    <meta name="twitter:title" content = "Klima im Advent" />
+    <meta
+      name = "twitter:description"
+      content = "Schoki for you"/>
+    <meta name = "twitter:image" content="/twitter_preview.jpg"/> 
+    <link rel="icon" href="/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="/favicon-57.png" sizes="57x57">
+    <link rel="icon" href="/favicon-76.png" sizes="76x76">
+    <link rel="icon" href="/favicon-96.png" sizes="96x96">
+    <link rel="icon" href="/favicon-128.png" sizes="128x128">
+    <link rel="icon" href="/favicon-192.png" sizes="192x192">
+    <link rel="icon" href="/favicon-228.png" sizes="228x228">
+    <link rel="shortcut icon" sizes="196x196" href="/favicon-196.png">
+    <link rel="apple-touch-icon" href="/favicon-120.png" sizes="120x120">
+    <link rel="apple-touch-icon" href="/favicon-152.png" sizes="152x152">
+    <link rel="apple-touch-icon" href="/favicon-180.png" sizes="180x180">
+    <meta name="msapplication-TileColor" content="#9a5c51">
+    <meta name="msapplication-TileImage" content="/favicon-144.png">
+    <meta name="msapplication-config" content="/browserconfig.xml" />  
+    <%- include("matomo") %>
+<style>
+@font-face {
+  font-family: "Elena";
+  src: url("/fonts/elena.ttf");
+}
+.elena-font {
+  font-family: Elena
+}
+#hoofs-left-1, #hoofs-left-2, #hoofs-right-1, #hoofs-right-2 {
+  transition: opacity 0.6s;
+}
+
+#hoofs-left-1 {
+  transform: translate3d(var(--hoof-l-1-x),var(--hoof-l-1-y),0);
+  opacity: var(--hoof-l-1-opacity, 1);
+}
+#hoofs-left-2 {
+  transform: translate3d(var(--hoof-l-2-x),var(--hoof-l-2-y),0);
+  opacity: var(--hoof-l-2-opacity, 1);
+}
+#hoofs-right-1 {
+  transform: translate3d(var(--hoof-r-1-x),var(--hoof-r-1-y),0);
+  opacity: var(--hoof-r-1-opacity, 1);
+}
+#hoofs-right-2 {
+  transform: translate3d(var(--hoof-r-2-x),var(--hoof-r-2-y),0);
+  opacity: var(--hoof-r-2-opacity, 1);
+}
+#game {
+  width: 100%;
+  height: 50vw;
+}
+ul > li::before {
+  content: '';
+  background-image: url(/weihnachtsmütze.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: inline-block;
+  width: 1.9rem;
+  transform: translateY(0.3rem);
+  height: 2rem;
+  margin-left: -2rem;
+}
+#facts, #facts > * {
+  max-height: 85vh;
+}
+body {
+  background: #eea9ba;
+}
+</style>
+  </head>
+  <body class="w-full px-3 pt-3">
+    <div class="flex items-center justify-around">
+      <div class="hidden lg:block">
+        <img src="/weihnachtsbaum.svg" class="w-32">
+      </div>
+      <div class="text-lg max-w-xl flex flex-col content-center mt-12">
+        <div class="flex items-center justify-between">
+          <h1 class="font-bold text-4xl leading-tight mb-2 mr-2">
+            Türchen 22: Schoki
+          </h1>
+        </div>
+        <p>
+          Weil der Weihnachtsmann die letzten Tage so viel mit backen,
+          dekorieren und Geschenke verpacken beschäftigt gewesen war, war er gar
+          nicht dazu gekommen, sich um seine eigenen Geschenke zu kümmern. Denn
+          natürlich wollte er seinen Liebsten gerne etwas persönliches zu
+          Weihnachten schenken. Um trotzdem nicht mit leeren Händen dazustehen
+          beschloss er, den heutigen Tag damit zu verbringen, bunte Schokoladen zu
+          machen. Ihm kam die Idee lustigerweise beim Aufräumen der Backstube,
+          weil er einen riesigen Karton übrig gebliebener Schokoladen gefunden
+          hatte. Da er auch noch ein paar Beeren und Nüsse auftreiben konnte,
+          wollte er jetzt für jeden eine personalisierte Lieblingsschokolade
+          herstellen und er hatte jede Menge Spaß daran, sich mit den Zutaten
+          auszutoben.
+        </p>
+        <p>
+          Wenn du auch noch nach einem Last-Minute Geschenk gesucht hast,
+          findest du hier eine Anleitung und ein paar Ideen zum Gestalten
+          eigener Schokoladen.
+        </p>
+        <p>
+          <h2 class="elena-font text-2xl">
+            Zutaten
+          </h2>
+          <ul class="pl-8">
+            <li>
+              400&nbsp;g vegane/dunkele Schokolade
+            </li>
+          </ul>
+          <h2 class="elena-font text-2xl">
+            Zutaten zum Verfeiern:
+          </h2>
+          <ul class="pl-8">
+            <li>
+              gefriergetrocknete Himbeeren
+            </li>
+            <li>
+              gehackte Pistazien
+            </li>
+            <li>
+              geröstete Cashewnüsse
+            </li>
+            <li>
+              geröstete Kokosnussraspeln
+            </li>
+            <li>
+              grobes Meersalz
+            </li>
+            <li>
+              getrocknete Cranberries
+            </li>
+            <li>
+              zerbröckelte Kekse
+            </li>
+          </ul>
+        </p>
+        <h2 class="elena-font text-2xl">
+          Zubereitung
+        </h2>
+        <p>
+          Die Schokolade kleinhacken und über einem Wasserbad schmelzen.
+        </p>
+        <p>
+          Alle Zutaten zum Bestreuen der Schokolade und die Behälter
+          bereitstellen.
+        </p>
+        <p>
+          Die Schokolade in die Behälter gießen. So viel Schokolade eingießen,
+          bis sie ca. 0,5 cm dick ist.
+        </p>
+        <p>
+          In der Zwischenzeit den Puderzucker mit dem Mark der ausgekratzten
+          Vanilleschoten vermischen und die Vanillekipferl noch heiß darin
+          wälzen.
+        </p>
+      </div>
+      <div class="hidden sm:block">
+        <img src="/Kleinzeugs.png" class="w-32">
+      </div>
+    </div>
+  </body>
+</html>
