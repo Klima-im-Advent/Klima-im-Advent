@@ -1,8 +1,8 @@
 TEMPDIR=`mktemp -d`
 OLD_DIR=`pwd`
 
-sed "s/ABGEORDNETEN_NAME/$1/" wunschzettel.tex \
-  | sed "s/MY_NAME/$2/" > $TEMPDIR/wunschzettel.tex
+sed "s/ABGEORDNETEN_NAME/$2/" wunschzettel.tex \
+  | sed "s/MY_NAME/$1/" > $TEMPDIR/wunschzettel.tex
 
 cd $TEMPDIR
 ln -s $OLD_DIR/Redressed-Regular.ttf Redressed-Regular.ttf
