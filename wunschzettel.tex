@@ -1,0 +1,86 @@
+\documentclass[parskip]{scrlttr2}
+
+\usepackage[dvipsnames]{xcolor}
+\usepackage{anyfontsize}
+\usepackage{fontspec}
+\usepackage{graphicx}
+\usepackage{tikz}
+
+\newfontfamily{\schnorkel}{Redressed}[Extension= .ttf, UprightFont = *-Regular]
+
+\definecolor{MyOrange}{HTML}{ED9C00}
+\definecolor{MyRed}{HTML}{8F2929}
+
+\begin{document}
+\thispagestyle{empty}
+ 
+\begin{tikzpicture}[remember picture, overlay]
+  \node[anchor=north west] at (current page.north west) {
+    \includegraphics{rand.png}
+  };
+  \node[anchor=east, xshift=-2pt] at (current page.east) {
+    \includegraphics{rand_l.png}
+  };
+  \node[anchor=west, xshift=2pt] at (current page.west) {
+    \includegraphics{rand_l.png}
+  };
+  \node[anchor=north east] at (current page.north east) {
+    \includegraphics{rand_rt.png}
+  };
+  \node[anchor=south west] at (current page.south west) {
+    \includegraphics{rand_ld.png}
+  };
+  \node[anchor=south east] at (current page.south east) {
+    \includegraphics{rand_rd.png}
+  };
+\end{tikzpicture}
+\begin{center}
+  {\schnorkel\fontsize{70}{160}\selectfont
+    \textcolor{MyOrange}{Wunschzettel}
+  }\\
+  \vbox{}
+  {\schnorkel\fontsize{43}{0}\selectfont 
+    \textcolor{MyRed}{
+    an meinen Abgeordneten.
+    \begin{tikzpicture}[remember picture, overlay]
+      \node[xshift=-1mm, yshift=-56mm, anchor=north west]
+        at (current page.north west){
+          \includegraphics[height=60pt]{zuckerstange.png}
+        };
+    \end{tikzpicture}
+  }
+}
+\end{center}
+\vspace{10pt}
+\textcolor{MyRed}{\textbf{\Large Liebe*r ABGEORDNETEN_NAME}}
+
+\large
+Ich hoffe du hast schöne Weihnachten und verbringst ein paar Tage zuhause,
+gemeinsam mit den Menschen, die dir wichtig sind.
+
+Nicht alle Menschen können Weihnachten diese Jahr zuhause feiern.
+Viele Länder wurden im vergangenen Jahr durch dramatische Naturkatastrophen
+erschüttert, unzählige Menschen mussten als Folge ihre Häuser verlassen.
+Diese Menschen mussten fliegen – vor Feuern und Überschwemmungen.
+Diese Menschen mussten fliehen – vor den Folgen des Klimawandels.
+
+Wenn nach der Weihnachtszeit der hektische Alltag wieder losgeht und du
+politische Entscheidungen treffen must – nimm dir doch mal ein paar Minuten und
+denke zurück an die schöne Zeit in deinem warmen Zuhause. Vielleicht saßt du
+mit deiner Familie vorm Tannenbaum oder du hast am Kamin ein altes Buch
+gelesen, viele Menschen haben diese sichere Zuhause heute nicht mehr.\\
+Du kannst dabei helfen, sie zu unterstützen. \\
+Du kannst dabei helfen, dass in Zukunft kein Mensch mehr wegen des Klimawandels
+das Zuhause verlieren muss.
+
+\textbf{
+\large Stimm im nächsten Jahr für das Klima!}
+
+\textbf{
+  \large
+  \rightline{Fröhliche Weihnachten! Dein}
+}
+\rightline{
+  \schnorkel \textcolor{MyRed}{MY_NAME}}
+
+\end{document}
